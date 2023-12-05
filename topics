@@ -1,0 +1,198 @@
+
+
+#***************************************
+#! 12. Strings 
+#***************************************
+
+#? Strings are sequence of Characters
+
+# In python specifically, strings are a sequence of Unicode Characters (16 bit)
+
+#     Creating Strings
+#     Accessing Strings
+#     Adding Chars to strings
+#     Editing Strings
+#     Deleting Strings
+#     Operations on Strings
+#     String Functions
+
+
+#* Creating Strings
+# s = 'hello'
+# s = "hello"
+#? multiline string
+# s = '''hello''' 
+# s = """hello""" 
+
+# s = str('hello')
+# print(s)
+
+
+
+#* Accessing Strings
+#? Positive Indexing (Left -> Right) (start with 0)
+# s = 'hello world'
+# print(s[0])
+
+
+#? Negative Indexing (Right - Left) (start with -1)
+# s = 'hello world'
+# print(s[-1])
+
+
+#? Slicing (when we need one or more chars) 
+# s = 'hello world'
+# print(s[0:5])
+# print(s[2:])
+# print(s[:])
+# print(s[0:6:2])
+
+# print(s[::-1])
+
+#? Using -ve indexing
+# s = 'hello world'
+# print(s[-5:0])
+# print(s[-1:-5:-1])
+
+
+
+#* Editing and Deleting in strings
+
+# s = 'hello world'
+
+# s[0] = 'H'         #? TypeError: 'str' object does not support item assignment
+
+#! Python strings are immutable
+#? which means that we can't edit the string
+
+
+#?************************************************************************* 
+# s = 'hello world'
+# del s
+# print(s)
+
+# del s[-1:-5:2]             
+# print(s)
+#? delete puri string ho jaati hai but string ke elements 
+#? delete nhi hote
+
+
+
+#! Operations on Strings
+#? 1. Arithmetic Operators  ( + and * )
+# print('New' + 'Delhi')
+# print('New'*5)
+#? 2. Relational Operators
+# print('mumbai'=='delhi')
+# print('mumbai'>'delhi')   # lexiographically #* It follows ASCII values
+# print('Delhi'>'delhi')
+#? 3. Logical Operators
+# print('hello' and 'world')
+# print('hello' or 'world')
+# print(' ' and 'world')       #* empty string means false
+# print(' ' or 'world')
+# print(not 'world')
+# print(not ' ')
+#? 4. Loops on String
+# for i in 'hello':
+#     print(i)
+
+# for i in 'hello':
+#     print('pune')
+#? 5. Membership Operators
+# print('d' in 'delhi')
+
+
+
+#! String Functions
+#* Common functions
+#?    1. len
+# print(len('hello world'))
+#?    2. max
+# print(max('hello world'))
+#?    3. min
+# print(min('hello world'))
+#?    4. sorted 
+# print(sorted('hello world'))
+# print(sorted('hello world', reverse=True))
+
+
+#* Capitalize/ Title/ upper/ Lower/ Swapcase
+
+# s = 'hello world'
+# print(s.capitalize())
+
+# print(s.title())
+
+# print(s.upper())
+
+# print(s.lower())
+
+# print(s.swapcase())
+
+
+
+#* Count/ Find/ Index
+# s = 'mera naam hi shinchan hai'
+# print(s.count('m'))
+# print(s.count('t'))    #? it will show error
+
+
+# print(s.find('hi'))
+# print(s.find('makoda'))     #? it will show -1 
+
+# print(s.index(hi))
+# print(s.index('chipkali'))   #? it will show error
+
+
+#* endswith/ startswith
+# s = 'mera naam hi shinchan hai'
+
+# print(s.endswith('i'))
+# print(s.endswith('k'))
+
+# print(s.startswith('m'))
+# print(s.startswith('k'))
+
+
+#* Format
+# name = 'shinchan'
+# gender = 'male'
+
+# s = 'Hi my name is {} and I am a sigma {}'
+# print(s.format(name,gender))
+
+
+
+#* isalnum/ isalpha/ isdigit/ isidentifier
+# s = 'shinchan124'
+
+# print(s.isalnum())
+# print(s.isalpha())
+# print(s.isdigit())
+# print(s.isidentifier())
+
+
+
+#* Split/ Join
+# s = 'Hi my name is shinchan and I am a sigma child'
+# print(s.split())
+# print(s.split('i'))
+
+# s1 = ['Hi', 'my', 'name', 'is', 'shinchan', 'and', 'I', 'am', 'a', 'sigma', 'child']
+# print(" ".join(s1))
+# print("i".join(s1))
+
+
+
+#* Replace 
+# s = 'Hi my name is shinchan'
+# print(s.replace('shinchan','nobita'))
+
+
+
+#* Strip
+# s = '            hello nobita         '
+# print(s.strip())
+
+
