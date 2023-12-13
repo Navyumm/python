@@ -343,3 +343,190 @@
 # print(type(result))
 
 
+# *****************************************************************************************
+
+
+# *********************************************
+#! 16  Sets
+# *********************************************
+
+# ? A set is an unordered collection of items. Every set element is unique (no duplicates) and must be immutable (cannot be changed).
+
+# ? However, a set itself is mutable. We can add or remove items from it.
+
+# ? Sets can also be used to perform mathematical set operations like union, intersection, symmetric difference, etc.
+
+#! Characteristics:
+
+# ? Unordered
+# ? Mutable
+# ? No Duplicates
+# ? Can't contain mutable data types
+
+
+# * Creating Sets
+# ? empty
+# s = set()
+# print(s)                                  # set()
+# print(type(s))                            # <class 'set'>
+# ? 1D and 2D
+# s1 = {1,2,3}
+# print(s1)                                 # {1, 2, 3}
+
+# s2 = {1,2,3,{4,5}}
+# print(s2)                                  #
+# ? homo and hetro
+# s3 = {1,'hello',4.5,(1,2,3)}
+# print(s3)                                 # {1, 4.5, (1, 2, 3), 'hello'}
+# ? using type conversion
+# s4 = set([1,2,3])
+# print(s4)                                 # {1, 2, 3}
+# ? duplicates not allowed
+# s5 = {1,1,2,2,3,3}
+# print(s5)                                 # {1, 2, 3}
+# ? set can't have mutable items
+# s6 = {1,2,[3,4]}
+# print(s6)                                 # TypeError: unhashable type: 'list'
+
+
+# s1 = {1,2,3}
+# s2 = {3,2,1}
+# print(s1 == s2)                           # True
+
+
+# * Accessing Items
+# s1 = {1,2,3,4}
+# s1[0:3]                                   # TypeError: 'set' object is not subscriptable
+
+
+# * Adding Items
+# S = {1,2,3,4}
+# ? add
+# S.add(5)
+# print(S)                                  # # {1, 2, 3, 4, 5}
+# ? update
+# S.update([5,6,7])
+# print(S)                                  # {1, 2, 3, 4, 5, 6, 7}
+
+
+# * Deleting Items
+# ? del
+# s = {1,2,3,4,5}
+# print(s)                                  # {1,2,3,4,5}
+# del s[0]
+# print(s)                                  # TypeError: 'set' object doesn't support item deletion
+# ? discard
+# s.discard(50)
+# print(s)                                  # {1,2,3,4,5}
+# ? remove
+# s.remove(5)                               # {1,2,3,4}
+# s.remove(50)                              # KeyError: 50
+# print(s)
+# ? pop
+# s.pop()                                   # random delete
+# print(s)
+# ? clear
+# s.clear()
+# print(s)                                  # cleared all the set items
+
+
+#! 16.1  Set Operation
+# *********************************************
+
+# s1 = {1,2,3,4,5}
+# s2 = {4,5,6,7,8}
+# ? Union(|)
+# s1 | s2
+# ? Intersection(&)
+# s1 & s2
+# ? Difference(-)
+# s1 - s2
+# s2 - s1
+# ? Symmetric Difference(^)
+# s1 ^ s2
+# ? Membership Test
+# 1 not in s1
+# ? Iteration
+# for i in s1:
+#     print(i)
+
+
+#! 16.2  Set Functions
+# *********************************************
+# ? len/sum/min/max/sorted
+# s = {3,1,4,5,2,7}
+# len(s)
+# sum(s)
+# min(s)
+# max(s)
+# sorted(s)
+# sorted(s,reverse=True)
+
+
+# ? union/update
+# s1 = {1,2,3,4,5}
+# s2 = {4,5,6,7,8}
+# ? s1 | s2
+# s1.union(s1)
+# s1.update(s2)
+# print(s1)
+# print(s2)
+
+
+# ? intersection/intersection_update
+# s1 = {1,2,3,4,5}
+# s2 = {4,5,6,7,8}
+
+# s1.intersection(s2)                             # {4,5}
+
+# s1.intersection_update(s2)
+# print(s1)                                       # {4,5}
+# print(s2)                                       # {4,5,6,7,8}
+
+
+# ? difference/difference_update
+# s1 = {1,2,3,4,5}
+# s2 = {4,5,6,7,8}
+
+# s1.difference(s2)                               # {1,2,3}
+
+# s1.difference_update(s2)
+# print(s1)
+# print(s2)                                       # {4,5,6,7,8}
+
+
+# ? symmetric_difference/symmetric_difference_update
+# s1 = {1,2,3,4,5}
+# s2 = {4,5,6,7,8}
+
+# s1.symmetric_difference(s2)                       # {1, 2, 3, 6, 7, 8}
+
+# s1.symmetric_difference_update(s2)
+# print(s1)
+# print(s2)                                         # {4, 5, 6, 7, 8}
+
+
+# ? isdisjoint/issubset/issuperset
+# s1 = {1,2,3,4}
+# s2 = {7,8,5,6}
+
+# s1.isdisjoint(s2)                               # jiske sbhi items alg hote hai
+
+
+# s1 = {1,2,3,4,5}
+# s2 = {3,4,5}
+
+# s2.issubset(s1)                                 # True
+# s1.issuperset(s2)                               # True
+
+
+# ? copy
+# s1 = {1,2,3}
+# s2 = s1.copy()
+# print(s1)
+# print(s2)
+
+
+# *****************************************************************************************
+
+
