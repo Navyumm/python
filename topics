@@ -530,3 +530,206 @@
 # *****************************************************************************************
 
 
+# *********************************************
+#! 18 Dictionary
+# *********************************************
+
+# ? Dictionary in Python is a collection of keys values, used to store data values like a map, which, unlike other data types which hold only a single value as an element.
+# ? In some languages it is known as map or associative arrays.
+
+# ? dict = { 'name' : 'navyum' , 'age' : 33 , 'gender' : 'male' }
+
+
+# * Characteristics:
+# ? Mutable
+# ? Indexing has no meaning
+# ? keys can't be duplicated
+# ? keys can't be mutable items
+
+
+#! 18.1 Create Dictionary
+# *********************************************
+# ? empty dictionary
+# d = {}
+# print(d)
+# ? 1D dictionary
+# d1 = {"name": "navyum", "gender": "male"}
+# print(d1)
+# ? with mixed keys
+# d2 = {(1, 2, 3): 1, "hello": "world"}
+# print(d2)
+# ? 2D dictionary -> JSON
+# s = {
+#     "name": "navyum",
+#     "college": "bit",
+#     "sem": 4,
+#     "subjects": {
+#         "dsa": 50,
+#         "maths": 67,
+#         "english": 34 },
+# }
+# print(s)
+# ? using sequence and dict function
+# d4 = dict([("name", "navyum"), ("age", 23), (3, 3)])
+# print(d4)
+# ? duplicate keys
+# d5 = {"name": "navyum", "name": "rahul"}
+# print(d5)                                         // not allowed
+# ? mutable items as keys
+# d6 = {"name": "navyum", (1, 2, 3): 2}
+# print(d6)
+
+
+#! 18.2 Accessing items
+# *********************************************
+
+# my_dict = {'name': 'Jack', 'age': 26}
+# # []
+# my_dict['age']
+# # get
+# my_dict.get('age')
+
+# s['subjects']['maths']
+
+
+#! 18.3 Adding key-value pair
+# *********************************************
+# d4['gender'] = 'male'
+# d4
+# d4['weight'] = 72
+# d4
+
+# s['subjects']['ds'] = 75
+# s
+
+
+#! 18.4 Remove key-value pair
+# *********************************************
+# d = {'name': 'navyum', 'age': 32, 3: 3, 'gender': 'male', 'weight': 72}
+# ? pop
+# d.pop(3)
+# print(d)
+# ? popitem
+# d.popitem()
+# d.popitem()
+# print(d)
+# ? del
+# del d['name']
+# print(d)
+# ? clear
+# d.clear()
+# print(d)
+
+# del s['subjects']['maths']
+# s
+
+
+#! 18.5 Editing key-value pair
+# *********************************************
+# s['subjects']['dsa'] = 80
+# print(s)
+
+
+#! 18.6 Dictionary Operations
+# *********************************************
+# ? Membership
+# ? Iteration
+# s = {
+#     "name": "navyum",
+#     "college": "bit",
+#     "sem": 4,
+#     "subjects": {
+#         "dsa": 50,
+#         "maths": 67,
+#         "english": 34 },
+# }
+# print(s)
+# 'name' in s
+
+
+# ? Iteration
+# d = {'name':'navyum','gender':'male','age':24}
+
+# for i in d:
+#     print(i,d[i])
+
+
+#! 18.7 Dictionary Functions
+# *********************************************
+# ? len/sorted/min/maxe
+# d = {'name':'navyum','gender':'male','age':24}
+
+# len(d)
+# print(d)
+# sorted(d,reverse=True)
+# max(d)
+
+
+# ? items/keys/values
+# print(d)
+# print(d.items())                      # dict_items([('name', 'navyum'), ('gender', 'male'), ('age', 33)])
+# print(d.keys())                       # dict_keys(['name', 'gender', 'age'])
+# print(d.values())                     # dict_values(['navyum', 'male', 33])
+
+
+# ? update
+# d1 = {1:2,3:4,4:5}
+# d2 = {4:7,6:8}
+# d1.update(d2)
+# print(d1)                             # {1: 2, 3: 4, 4: 7, 6: 8}
+
+
+#! 18.8 Dictionary Comprehension
+# *********************************************
+
+# TODO      { keys : values for vars in iterable }
+
+
+# ? print 1st 10 numbers and their squares
+# {i:i**2 for i in range(1,11)}             # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
+
+
+# distances = {'delhi':1000,'mumbai':2000,'bangalore':3000}
+# print(distances.items())
+# dict_items([('delhi', 1000), ('mumbai', 2000), ('bangalore', 3000)])
+
+
+# ? using existing dict
+# distances = {'delhi':1000,'mumbai':2000,'bangalore':3000}
+# {key:value*0.62 for (key,value) in distances.items()}     # {'delhi': 620.0, 'mumbai': 1240.0, 'bangalore': 1860.0}
+
+
+# ? using zip
+# days = ["Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+# temp_C = [30.5,32.6,31.8,33.4,29.8,30.2,29.9]
+
+# {i:j for (i,j) in zip(days,temp_C)}
+
+
+# ? using if condition
+# products = {'phone':10,'laptop':0,'charger':32,'tablet':0}
+
+# {key:value for (key,value) in products.items() if value>0}
+
+
+# ? Nested Comprehension
+# ? print tables of number from 2 to 4
+# {i:{j:i*j for j in range(1,11)} for i in range(2,5)}
+
+
+# {
+#     2:{1:2,2:4,3:6,4:8},
+#     3:{1:3,2:6,3:9,4:12},
+#     4:{1:4,2:8,3:12,4:16}
+# }
+
+
+
+
+
+
+
+
+
+
+
