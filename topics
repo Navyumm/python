@@ -1,10 +1,665 @@
+# Date : 30/11/2023
+# Day : 1
 
 
-#***************************************
-#! 12. Strings 
-#***************************************
+# ! python is case sensitive language
+# print("Hello World!!",)
+# print("Navii")
+# print("N", end="-")
+# print("A")
+# print("V")
+# print("I")
+# print("Hello World!!",78,"NAvi",sep="/")
 
-#? Strings are sequence of Characters
+
+# **********************************
+#! DATA TYPES
+# **********************************
+
+# * 1. integer
+# print(8)
+
+# int limit  (1*10^308)
+# print(1e309)
+
+
+# * 2. Decimal/Float
+# print(8.55)
+
+# Float limit   (1.7*10^307)
+# print(1.7e308)
+
+
+# * 3. Boolean
+# print(True)
+# print(False)
+
+
+# * 4. String
+# print("Hello World!!")
+
+
+# * 5. Complex
+# print(5+6j)
+
+
+# * 6. list -> in C (Array)
+# print([1,2,3,4,5,6])
+
+
+# * 7. Tuple
+# print((1,2,3,4,5,6))
+
+
+# * 8. sets
+# print({1,2,3,4,5,6})
+
+
+# * 9. Dictionary
+# print({"Name":"Navii","Gender":"Male"})
+
+
+# * 10. type
+# type("Navi")
+
+
+#!:::::::::::::::::  Variable ::::::::::::::::::
+
+# * Static Vs Dynamic Typing
+# * static Vs Dynamic Binding
+# * way of creating variables
+
+# ? Variables are basically containers
+
+
+# name = "Navyum"
+# print(name)
+
+# a = 5
+# b = 6
+# print(a+b)
+
+
+# * Dynamic Typing
+# ? is that who do not tell the data type
+# b = 5
+
+
+# * Static typing
+# int a = 5     (using in C, Java, C++)
+
+
+# * Dynamic Binding
+# ? python has dynamic binding which means that
+# ? hum ek variable ko baar baar use kar sakte hai with multiple data types
+# a = 5
+# print(a)
+# a = "Navii"
+# print(a)
+
+
+# * Static Binding
+# ? in this we can't able to use (C, C++, Java)
+# int a = 5
+# print(a)
+# a = "Navii"
+# print(a)
+
+
+# * way of creating variables
+
+# a = 1
+# b = 2
+# c = 3
+# print(a,b,c)
+
+
+# a,b,c = 1,2,3
+# print(a,b,c)
+
+
+# a=b=c=5
+# print(a,b,c)
+
+
+# ***************************************
+#! 4. Keywords & Identifier
+# ***************************************
+
+# Compilation : during compilation machine have some keywords like : print, if, True, False and many more
+
+# ? Identifier : class name, function name and variable name
+
+# You can't start with a digit
+# You can use special chars (_)
+# identifier can not be use keywords
+
+
+# ***************************************
+#! 5. User Input
+# ***************************************
+# static Vs Dynamic info
+
+# input("Enter your Name : ")
+
+
+# * take input from users and store them in a variable
+# f_num = input("Enter first number : ")
+# s_num = input("Enter second number : ")
+# # print(type(f_num), type(s_num))
+# #* add the 2 variables
+# result = f_num + s_num
+# result = int(f_num) + int(s_num)
+# #* print the result
+# print(result)
+# print(type(f_num))
+
+
+# ***************************************
+#! 6. Type Conversion
+# ***************************************
+# ?  1. Implicit  Vs    2. Explicit
+
+# print(5+5.6)
+# print(type(5),type(5.6))
+
+
+# print(4+"4")
+
+# * Explicit
+# ?  str -> int
+#   type(int("4"))
+#   type(int(5+4j))
+
+# ?  int -> str
+#   str(4)
+
+# ? float
+#  float(4)
+
+
+# ***************************************
+#! 7. Literals
+# ***************************************
+# ? Variable ke andr hum jis value ko store karte hai usai literal bola jata hai
+# like a = 2
+# a : variable
+# = : oprator
+# 2 : literal
+
+
+# a = 0b1010  #* Binary Literal
+# b = 100     #* Decimal Literal
+# c = 0o310   #* Octal Literal
+# d = 0x12c   #* Hexadecimal Literal
+
+# #* Float Literal
+# Float_1 = 10.5
+# Float_2 = 1.5e2      #? 1.5 * 10^2
+# Float_3 = 1.5e-3
+
+
+# #* Complex Literal
+# x = 3.14j
+
+
+# print(a,b,c,d)
+# print(Float_1,Float_2,Float_3)
+# print(x, x.imag, x.real)
+
+
+# **********************************************
+
+# string  = 'This is Python'
+# strings = "This is Python"
+# char    = "C"
+# multiline_str = """This is multiline string with more than one line code."""
+# unicode = u"\U0001f600\U0001F606\U0001F923"
+# raw_str = r"raw \n string"
+
+# print(string)
+# print(strings)
+# print(char)
+# print(multiline_str)
+# print(unicode)
+# print(raw_str)
+
+
+# ***********************************************
+
+
+# a = True + 4
+# b = False + 10
+
+# print("a:",a)
+# print("b:",b)
+
+
+# ***********************************************
+
+
+# a = None
+# print(a)
+
+
+# *****************************************************************************************
+
+
+#! Day : 2
+
+
+# ***************************************
+#! 8. Operators
+# ***************************************
+
+# ? 1. Arithmetic Operators
+# ? 2. Relational Operators
+# ? 3. Logical Operators
+# ? 4. Bitwise Operators
+# ? 5. Assignment Operators
+# ? 6. Membership Operators
+
+
+# * 1. Arithmetic Operators
+# print(5+2)
+# print(5-2)
+# print(5*2)
+# print(5/2)
+# print(5%2)
+# print(5**2)     # power of
+# print(5//2)     # int division
+
+
+# * 2. Relational Operators
+# print(4>5)
+# print(4<5)
+# print(4<=5)
+# print(4>=5)
+# print(4==5)
+# print(4!=5)
+
+
+# * 3. Logical Operators
+# print(4 and 0)
+# print(4 or 0)
+# print(4 not 0)
+
+
+# * 4. Bitwise Operators
+# print(2 & 3)
+# print(2 | 3)
+# print(2 ^ 3)          #? bitwise xor
+# print(~3)             #? not
+# print(4 >> 2)
+# print(4 << 2)         #? bitwise right
+
+
+# * 5. Assignment Operators
+# a = 2
+# a += 2
+# a -= 2
+# a *= 2
+# a /= 2
+
+
+# * 6. Membership Operators
+# ? on/not in
+# print('D' in 'Delhi')
+# print(1 in [2,3,4,5])
+
+# print('D' not in 'Delhi')
+
+
+#! Question : Find the sum of a 3 digit number entered by the user
+
+# number = int (input("Enter a 3 digit number : "))
+
+# * 345%10 -> 5
+# a = number % 10
+# number = number//10
+
+# #* 34%10 -> 4
+# b = number % 10
+# number = number//10
+
+# #* 3%10 -> 3
+# c = number % 10
+# number = number//10
+
+
+# print(a + b + c)
+
+
+# ***************************************
+#! 9. If-else in python
+# ***************************************
+# ? login program and indentation
+# ? email -> xuz@gmail.com
+# ? password -> 1234
+
+# if condition:
+#     # code
+# else:
+#     # code
+
+
+# email = input('Enter email : ')
+# password = input('Enter password : ')
+
+# if email == "xuz@gmail.com" and password == '1234':
+#     print('Welcome!!')
+# elif email == "xuz@gmail.com" and password != '1234':
+#     print('Incorrect Password')
+#     password = input('enter password again : ')
+#     if password == '1234':
+#         print('Welcome!!!')
+#     else:
+#         print('beta tumse na ho payega! 🫥')
+# else:
+#     print('Enter valid value')
+
+
+#! if-else examples
+# * 1. Find the min of 3 given numbers
+
+# num1 = int (input('Enter first number : '))
+# num2 = int (input('Enter Second number : '))
+# num3 = int (input('Enter Third number : '))
+
+
+# if num1<num2 and num1<num3:
+#     print(num1, ' is smaller than ', num2, 'and', num3)
+# elif num2<num1 and num2<num3:
+#     print(num2, ' is smaller than ', num1, ' and ', num3)
+# elif num3<num1 and num3<num2:
+#     print(num3, ' is smaller than ', num1, 'and', num2)
+# else:
+#     print('Enter valid input')
+
+
+# * 2. Menu Driven calculator
+# ? simple calculator
+# f_num = int(input('Enter the first number : '))
+# s_num = int(input('Enter the Second number : '))
+
+# op = input('Enter the operation : ')
+
+# if op == '+':
+#     print(f_num + s_num)
+# elif op == '-':
+#     print(f_num - s_num)
+# elif op == '*':
+#     print(f_num * s_num)
+# elif op == '/':
+#     print(f_num / s_num)
+# else:
+#     print('Enter valid input!!')
+
+
+# ? Menu Driven on ATM
+# menu = input("""
+# Hi! how can I help you.
+# 1. Enter 1 for pin change
+# 2. Enter 2 for balance check
+# 3. Enter 3 for withdrawl
+# 4. Enter 4 for exit
+# """)
+
+# if menu == '1':
+#     print('pin change')
+# elif menu == '2':
+#     print('gareeb insan')
+# elif menu == '3':
+#     print('paisa khtam')
+# elif menu == '4':
+#     print('Exit')
+# else:
+#     print('Error 404 not found')
+
+
+# *****************************************************************************************
+
+
+# ***************************************
+#! 10. Modules in python
+# ***************************************
+# module means phle se kisi ne code likha hua h hum usai apne according use kar lenge
+
+# ? math
+# ? keyword
+# ? constant
+# ? random
+
+
+# import math
+# print(math.factorial(4))
+
+
+# import keyword
+# print(keyword.kwlist)
+
+
+# import random
+# print(random.randrange(1,100))
+
+
+# import datetime
+# print(datetime.datetime.now())
+
+
+# help('modules')
+
+
+# *****************************************************************************************
+
+
+# ***************************************
+#! 11. Loops in python
+# ***************************************
+
+# ? Need for loops
+# ? while loop
+# ? For loop
+
+#! 11.1. While loop in python
+# ***************************************
+
+# * while loop example -> program to print table
+# * program -> sum of all digits of a given number
+# * program -> keep accepting numbers from users till he/she enters a 0 and then find the avg.
+
+
+# number = int(input('Enter a number : '))
+
+# i = 1
+
+# while i<11:
+#     print(number, '*', i, '=', number * i)
+#     i += 1
+
+
+# * while loop with else
+
+# x = 1
+
+# while x<3:
+#     print(x)
+#     x += 1
+
+# else:
+#     print('limit crossed')
+
+
+#! Guessing game
+# * generate a random integer between 1 and 100
+
+# import random
+# jackpot = random.randint(1,100)
+
+
+# guess = int(input('guess karo : '))
+# counter=1
+# while guess != jackpot:
+#     if guess < jackpot:
+#         print('Wrong! guess higher : ')
+#     else:
+#         print('wrong! guess lower : ')
+
+#     guess = int(input('guess karo : '))
+#     counter +=1
+
+# else:
+#     print('correct guess!!😍')
+#     print('attempts',counter)
+
+
+# *****************************************************************************************
+
+
+#! 11.2. for loop in python
+# ***************************************
+# ? in range first no. included and second excluded
+# ? and third no. is for gap also we can call it step size
+
+# for i in range(1,11,2):
+#     print(i)
+
+# #* if we want to print 10 to 1 then :
+
+
+# for i in range(10,0,-1):
+#     print(i)
+
+
+# * we can use for loop in any data types
+
+# for i in 'Dhoom':
+#     print(i)
+
+# for i in [1,2,5,6,9,5]:
+#     print(i)
+
+
+#! Program : The current population of a town is 10000. The population of the town is increasing at the rate of 10% per year. You have to write a program to find out the population at the end of each of thr last 10 years.
+
+# curr_pop = 10000
+
+# for i in range (10,0,-1):
+#     print(i, curr_pop)
+#     curr_pop = curr_pop/1.1
+
+
+#! Sequence sum
+# * 1/1! + 2/2! + 3/3! + ....
+
+# n = int(input('Enter n : '))
+
+# result = 0
+# fact = 1
+
+# for i in range(1, n+1):
+#     fact = fact * i
+#     result = result + i/fact
+
+# print(result)
+
+
+# *****************************************************************************************
+
+
+#! 11.3. Nested loop
+# ***************************************
+
+
+# for i in range(1,5):
+#     for j in range(1,5):
+#         print(i,j)
+
+
+#! Pattern 1
+# *
+# **
+# ***
+
+# rows = int(input('Enter no. of rows : '))
+
+# for i in range(1,rows+1):
+#     for j in range(1,i+1):
+#         print('*',end=' ')
+
+#     print()
+
+
+#! Pattern 2
+# ?  1
+# ?  121
+# ?  12321
+# ?  1234321
+
+
+# rows = int(input('Enter no. of rows : '))
+
+# for i in range(1,rows+1):
+#     for j in range(1,i+1):
+#         print(j,end=' ')
+
+#     for k in range(i-1,0,-1):
+#         print(k,end=' ')
+
+#     print()
+
+
+# *****************************************************************************************
+
+
+#! 11.4. loop control statement
+# ***************************************
+
+# ?  1. break
+# ?  2. continue
+# ?  3. pass
+
+# *  1. break
+# for i in range(1,10):
+#     if i == 5:
+#         break
+#     print(i)
+
+#! program : find prime no. between given range
+
+# lower = int(input('Enter starting no. : '))
+# upper = int(input('Enter ending no. : '))
+
+# for i in range(lower,upper+1):
+#     for j in range(2,i):
+#         if i%j == 0:
+#             break
+#     else:
+#         print(i)
+
+
+# *  2. continue
+
+# for i in range(1,10):
+#     if i == 5:
+#         continue
+#     print(i)
+
+
+# *  3. pass
+
+# for i in range(1,10):
+#     pass
+
+
+# *****************************************************************************************
+
+
+# ***************************************
+#! 12. Strings
+# ***************************************
+
+# ? Strings are sequence of Characters
 
 # In python specifically, strings are a sequence of Unicode Characters (16 bit)
 
@@ -17,61 +672,29 @@
 #     String Functions
 
 
-#* Creating Strings
+# * Creating Strings
 # s = 'hello'
 # s = "hello"
-#? multiline string
-# s = '''hello''' 
-# s = """hello""" 
+# ? multiline string
+# s = '''hello'''
+# s = """hello"""
 
 # s = str('hello')
 # print(s)
 
 
-
-
-
-#***************************************
-#! 13.1 List Comprehension
-#***************************************
-
-#? List Comprehension provides a concise way of creating lists.
-
-#* newList = [expression for item in iterable if condition == True]
-
-#? Advantages of List Comprehension
-# More time-efficient and space-efficient than loops.
-# Require fewer lines of code.
-# Transforms iterative statement into a formula.
-
-
-#? Add 1 to 10 numbers to a list
-# L = []
-# for i in range(1,11):
-#     L.append(i)
-
-# print(L)          //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-#? by using list comprehension
-# L = [i for i in range(1,11)]
-# print(L)            //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-
-
-
-
-#* Accessing Strings
-#? Positive Indexing (Left -> Right) (start with 0)
+# * Accessing Strings
+# ? Positive Indexing (Left -> Right) (start with 0)
 # s = 'hello world'
 # print(s[0])
 
 
-#? Negative Indexing (Right - Left) (start with -1)
+# ? Negative Indexing (Right - Left) (start with -1)
 # s = 'hello world'
 # print(s[-1])
 
 
-#? Slicing (when we need one or more chars) 
+# ? Slicing (when we need one or more chars)
 # s = 'hello world'
 # print(s[0:5])
 # print(s[2:])
@@ -80,75 +703,72 @@
 
 # print(s[::-1])
 
-#? Using -ve indexing
+# ? Using -ve indexing
 # s = 'hello world'
 # print(s[-5:0])
 # print(s[-1:-5:-1])
 
 
-
-#* Editing and Deleting in strings
+# * Editing and Deleting in strings
 
 # s = 'hello world'
 
 # s[0] = 'H'         #? TypeError: 'str' object does not support item assignment
 
 #! Python strings are immutable
-#? which means that we can't edit the string
+# ? which means that we can't edit the string
 
 
-#?************************************************************************* 
+# ?*************************************************************************
 # s = 'hello world'
 # del s
 # print(s)
 
-# del s[-1:-5:2]             
+# del s[-1:-5:2]
 # print(s)
-#? delete puri string ho jaati hai but string ke elements 
-#? delete nhi hote
-
+# ? delete puri string ho jaati hai but string ke elements
+# ? delete nhi hote
 
 
 #! Operations on Strings
-#? 1. Arithmetic Operators  ( + and * )
+# ? 1. Arithmetic Operators  ( + and * )
 # print('New' + 'Delhi')
 # print('New'*5)
-#? 2. Relational Operators
+# ? 2. Relational Operators
 # print('mumbai'=='delhi')
 # print('mumbai'>'delhi')   # lexiographically #* It follows ASCII values
 # print('Delhi'>'delhi')
-#? 3. Logical Operators
+# ? 3. Logical Operators
 # print('hello' and 'world')
 # print('hello' or 'world')
 # print(' ' and 'world')       #* empty string means false
 # print(' ' or 'world')
 # print(not 'world')
 # print(not ' ')
-#? 4. Loops on String
+# ? 4. Loops on String
 # for i in 'hello':
 #     print(i)
 
 # for i in 'hello':
 #     print('pune')
-#? 5. Membership Operators
+# ? 5. Membership Operators
 # print('d' in 'delhi')
 
 
-
 #! String Functions
-#* Common functions
-#?    1. len
+# * Common functions
+# ?    1. len
 # print(len('hello world'))
-#?    2. max
+# ?    2. max
 # print(max('hello world'))
-#?    3. min
+# ?    3. min
 # print(min('hello world'))
-#?    4. sorted 
+# ?    4. sorted
 # print(sorted('hello world'))
 # print(sorted('hello world', reverse=True))
 
 
-#* Capitalize/ Title/ upper/ Lower/ Swapcase
+# * Capitalize/ Title/ upper/ Lower/ Swapcase
 
 # s = 'hello world'
 # print(s.capitalize())
@@ -162,21 +782,20 @@
 # print(s.swapcase())
 
 
-
-#* Count/ Find/ Index
+# * Count/ Find/ Index
 # s = 'mera naam hi shinchan hai'
 # print(s.count('m'))
 # print(s.count('t'))    #? it will show error
 
 
 # print(s.find('hi'))
-# print(s.find('makoda'))     #? it will show -1 
+# print(s.find('makoda'))     #? it will show -1
 
 # print(s.index(hi))
 # print(s.index('chipkali'))   #? it will show error
 
 
-#* endswith/ startswith
+# * endswith/ startswith
 # s = 'mera naam hi shinchan hai'
 
 # print(s.endswith('i'))
@@ -186,7 +805,7 @@
 # print(s.startswith('k'))
 
 
-#* Format
+# * Format
 # name = 'shinchan'
 # gender = 'male'
 
@@ -194,8 +813,7 @@
 # print(s.format(name,gender))
 
 
-
-#* isalnum/ isalpha/ isdigit/ isidentifier
+# * isalnum/ isalpha/ isdigit/ isidentifier
 # s = 'shinchan124'
 
 # print(s.isalnum())
@@ -204,8 +822,7 @@
 # print(s.isidentifier())
 
 
-
-#* Split/ Join
+# * Split/ Join
 # s = 'Hi my name is shinchan and I am a sigma child'
 # print(s.split())
 # print(s.split('i'))
@@ -215,18 +832,16 @@
 # print("i".join(s1))
 
 
-
-#* Replace 
+# * Replace
 # s = 'Hi my name is shinchan'
 # print(s.replace('shinchan','nobita'))
 
 
-
-#* Strip
+# * Strip
 # s = '            hello nobita         '
 # print(s.strip())
 
-#*****************************************************************************
+# *****************************************************************************
 
 #! find the length of a given string without using the len() function
 # s = input('Enter the string : ')
@@ -235,20 +850,18 @@
 
 # for i in s:
 #     counter += 1
-    
-# print('length of string is : ', counter)
 
+# print('length of string is : ', counter)
 
 
 #! Extract the username from a given email.
 #! Eg if the email is xuz125@gmail.com
-#* then the username should be xuz125
+# * then the username should be xuz125
 
 # s = input('Enter the email : ')
 
 # pos = s.index('@')
 # print(s[0:pos])
-
 
 
 #! count the frequency of a particular character in a provided string.
@@ -257,7 +870,6 @@
 # char = input('Enter the character : ')
 
 # print(s.count(char))
-
 
 
 #! write a program which can remove a particular character from a string
@@ -274,18 +886,16 @@
 # print(result)
 
 
-
 #! Write a program that can check the number of words in a string without split()
 
 # s = input('Enter the words : ')
 # for i in range (0,len(s)//2):
 #     if s[i] != s[len(s) - i -1]:
-        
 
 
 #! write a program that can check whether a given string is palindrome or not.
-#* like : abba
-#* malayalam
+# * like : abba
+# * malayalam
 
 # s = input('Enter the word : ')
 
@@ -300,15 +910,13 @@
 #     print('Palindrome')
 
 
-
-
 #! write a program to count the number of words in a string without split()
 
 # s = input('Enter the word : ')
 # L = []
 # temp = ''
 # for i in s:
-    
+
 #     if i != ' ':
 #         temp = temp + i
 #     else:
@@ -316,7 +924,6 @@
 #         temp = ''
 
 # print()
-
 
 
 #! write a python program to convert a string to title case without using the title()
@@ -338,9 +945,632 @@
 # while num != 0:
 #     result = digits[num % 10] + result
 #     num = num//10
-    
+
 # print(result)
 # print(type(result))
+
+
+# *****************************************************************************************
+
+
+# ***************************************
+#! 13. Lists in python
+# ***************************************
+
+# ? What are Lists?
+# ? Lists Vs Arrays
+# ? Characteristics of a List
+# ? How to create a List
+# ? Access items from a List
+# ? Editing items in a List
+# ? Deleting items from a List
+# ? Operations on Lists
+# ? Function on Lists
+
+
+# * What are Lists?
+# ? List is a data type where you can store multiple items under 1 name. More technically, lists act like dynamic arrays which means you can add more items on the fly.
+L = [20, "Jess", 35.32, [30, 50, 44]]
+
+
+# * Lists Vs Arrays
+# ? Convenience -> Heterogeneous
+# ? Speed of Execution            // (slower)
+# ? Memory                        // Referential Array
+# ? Fixed Vs Dynamic Size
+
+# a = 2
+# print(id(2))
+
+# L =[1,2,3]
+
+# print(id(L))
+# print(id(L[0]))
+# print(id(L[1]))
+# print(id(L[2]))
+# print(id(1))
+# print(id(2))
+# print(id(3))
+# ? How lists are stored in memory
+
+
+# * Characteristics of a List
+# ? Ordered
+# ? Changeable/Mutable
+# ? Heterogeneous                (means that we can add multiple data types)
+# ? Can have duplicates
+# ? are dynamic
+# ? can be nested
+# ? items can be accessed
+# ? can contain any kind of objects in python
+
+
+# L1 = [1,2,3]
+# L2 = [3,2,1]
+# print(L1 == L2)
+
+
+# * create a List
+# #  ? Empty
+# print([])
+# #? 1D -> Homo
+# print([1,2,3,4,5])
+# #? 2D
+# print([1,2,3,[4,5]])
+# #? 3D
+# print([[[1,2],[3,4]],[[5,6],[7,8]]])
+# #? Heterogenous
+# print([1,True,5.6,5+6j,'Hello'])
+# #? Using Type conversion
+# print(list('hello'))
+
+
+# * Accessing Items from a List
+# #? Indexing
+# L = [1,2,3,4,5,6]
+# print(L[2])                                 #* Positive Indexing
+# print(L[-2])                                #* Negative Indexing
+
+# ? in 2D
+# L = [1,2,3,[4,5]]
+# print(L[3][0])
+# print(L[-1][0])
+
+# ? in 3D
+# L = [[[1,2],[3,4]],[[5,6],[7,8]]]
+# print(L[1][0][0])
+# print(L[0][0][1])
+
+
+# #? Slicing
+# L = [1,2,3,4,5,6]
+# print(L[0:3])
+# print(L[::-1])
+
+
+# * Adding Items to a List
+# ? append          -> is used for single item
+# L = [1,2,3,4,5]
+# L.append(6)
+# print(L)
+
+# L = [1,2,3,4,5]
+# L.append([6,7,8])
+# print(L)               // [1, 2, 3, 4, 5, [6, 7, 8]]
+
+
+# ? extend          -> is used for multiple items
+# L = [1,2,3,4,5]
+# L.extend([6,7,8])
+# print(L)
+
+# L = [1,2,3,4,5]
+# L.extend('delhi')
+# print(L)                // [1, 2, 3, 4, 5, 'd', 'e', 'l', 'h', 'i']
+
+
+# ? insert         -> if we want to add something at desired position
+# L = [1,2,3,4,5]
+# L.insert(1,1.1)
+# print(L)
+
+
+# * Editing items in a List
+# L = [1,2,3,4,5]
+# #? editing with indexing
+# L[-1] = 500
+# #? editing with slicing
+# L[1:4] = [200,300,400]
+# print(L)
+
+
+# * Deleting items from a List
+# #? del
+# L = [1,2,3,4,5]
+# #? indexing
+# del L[-1]
+# #? slicing
+# del L[1:3]
+# print(L)
+
+
+# ? remove
+# L = [1,2,3,4,5]
+# L.remove(5)
+# print(L)
+
+
+# ? pop
+# L = [1,2,3,4,5]
+# L.pop()
+# print(L)            // [1, 2, 3, 4]
+
+
+# ? clear
+# L = [1,2,3,4,5]
+# L.clear()
+# print(L)            // []
+
+
+# * Operations on Lists
+# ? Arithmetic (+ ,*)
+# L1 = [1,2,3,4]
+# L2 = [5,6,7,8]
+# # Concatenation/Merge
+# print(L1 + L2)
+# print(L1*3)
+# ? Membership
+# L1 = [1,2,3,4,5]
+# L2 = [1,2,3,4,[5,6]]
+# print(5 not in L1)
+# print([5,6] in L2)
+# ? Loop
+# L1 = [1,2,3,4,5]
+# L2 = [1,2,3,4,[5,6]]
+# L3 = [[[1,2],[3,4]],[[5,6],[7,8]]]
+# for i in L3:
+#     print(i)
+
+
+# * List Functions
+# ? len/min/max/sorted
+# L = [2,1,5,7,0]
+
+# print(len(L))
+# print(min(L))
+# print(max(L))
+# print(sorted(L,reverse=True))
+
+# ? count
+# L = [1,2,1,3,4,1,5]
+# L.count(5)
+
+
+# ? index
+# L = [1,2,1,3,4,1,5]
+# L.index(1)
+
+
+# ? reverse
+# L = [2,1,5,7,0]
+# # permanently reverses the list
+# L.reverse()
+# print(L)
+
+
+# ? sort (vs sorted)
+# L = [2,1,5,7,0]
+# print(L)
+# print(sorted(L))
+# print(L)
+# L.sort()                // it sort permanently
+# print(L)
+
+
+# ? copy -> shallow
+# L = [2,1,5,7,0]
+# print(L)
+# print(id(L))
+# L1 = L.copy()
+# print(L1)
+# print(id(L1))
+
+
+# ? can contain any kind of objects in python
+# L = [1,2,print,type,input]
+
+# print(L)
+
+
+# *****************************************************************************************
+
+
+# ***************************************
+#! 13.1 List Comprehension
+# ***************************************
+
+# ? List Comprehension provides a concise way of creating lists.
+
+# * newList = [expression for item in iterable if condition == True]
+
+# ? Advantages of List Comprehension
+# More time-efficient and space-efficient than loops.
+# Require fewer lines of code.
+# Transforms iterative statement into a formula.
+
+
+# ? Add 1 to 10 numbers to a list
+# L = []
+# for i in range(1,11):
+#     L.append(i)
+
+# print(L)          //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# ? by using list comprehension
+# L = [i for i in range(1,11)]
+# print(L)            //  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+# ? scalar multiplication on a vector
+# v = [2,3,4]
+# s = -3
+# [-6,-9,-12]
+
+# x = []
+# for i in v:
+#     x.append(i*s)
+
+# print(x)
+# ? by using list comprehension
+# [s*i for i in v]    // [-6, -9, -12]
+
+
+# ? Add squares
+# L = [1,2,3,4,5]
+
+# [i**2 for i in L]         // [1, 4, 9, 16, 25]
+
+
+# ? Print all numbers divisible by 5 in the range of 1 to 50
+# [i for i in range(1,51) if i%5 == 0]        // [5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+
+
+# ? find languages which start with letter p
+# languages = ['java','python','php','c','javascript']
+
+# [language for language in languages if language.startswith('p')]
+
+
+# ? Nested if with List Comprehension
+# basket = ['apple','guava','cherry','banana']
+# my_fruits = ['apple','kiwi','grapes','banana']
+
+# add new list from my_fruits and items if the fruit exists in basket and also starts with 'a'
+# [fruit for fruit in my_fruits if fruit in basket if fruit.startswith('a')]     // ['apple']
+
+
+# ? Print a (3,3) matrix using list comprehension -> Nested List comprehension
+# [[i*j for i in range(1,4)] for j in range(1,4)]      // [[1, 2, 3], [2, 4, 6], [3, 6, 9]]
+
+
+# ? cartesian products -> List comprehension on 2 lists together
+# L1 = [1,2,3,4]
+# L2 = [5,6,7,8]
+
+# [i*j for i in L1 for j in L2]         // [5, 6, 7, 8, 10, 12, 14, 16, 15, 18, 21, 24, 20, 24, 28, 32]
+
+
+# *****************************************************************************************
+
+
+# *********************************************
+#! 13.2  Here are 2 ways to traverse a list
+# *********************************************
+# The above code is a comment in Python that explains two ways to traverse a list.
+
+# ? itemwisex
+# ? indexwise
+
+# L = [1,2,3,4]
+# #? itemwise
+# for i in L:
+#     print(i)
+
+# #? indexwise
+# for i in range(0,len(L)):
+#     print(i)
+#     print(L[i])
+
+
+# ******************************************
+#! 13.3  Zip
+# ******************************************
+
+# ? The zip() function returns a zip object, which is an iterator of tuples where the first item in each passed iterator is paired together, and then the second item in each passed iterator are paired together.
+
+# ? If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.
+
+
+# * Write a program to add items of 2 lists indexwise
+
+# L1 = [1,2,3,4]
+# L2 = [-1,-2,-3,-4]
+
+# list(zip(L1,L2))
+
+# [i+j for i,j in zip(L1,L2)]      // [0, 0, 0, 0]
+
+
+# ******************************************
+#! 13.4  Disadvantages of Python Lists
+# ******************************************
+
+# ? Slow
+# ? Risky usage
+# ? eats up more memory
+
+# a = [1,2,3]
+# b = a
+## b = a.copy()
+
+# print(a)
+# print(b)
+
+# a.append(4)
+# print(a)
+# print(b)
+
+# ? lists are mutable
+
+
+# ******************************************
+#! 13.5  List Programs
+# ******************************************
+# ? Create 2 lists from a given list where
+# ? 1st list will contain all the odd numbers from the original list and
+# ? the 2nd one will contain all the even numbers
+
+# L = [1,2,3,4,5,6]
+
+
+# ? How to take list as input from user
+
+
+# ? Write a program to merge 2 list without using the + operator
+# L1 = [1,2,3,4]
+# L2 = [5,6,7,8]
+
+
+# ? Write a program to replace an item with a different item if found in the list
+# L = [1,2,3,4,5,3]
+# ? replace 3 with 300
+
+
+# ? Write a program that can convert a 2D list to 1D list
+
+
+# ? Write a program to remove duplicate items from a list
+# L = [1,2,1,2,3,4,5,3,4]
+
+
+# ? Write a program to check if a list is in ascending order or not
+
+
+# *****************************************************************************************
+
+
+# *********************************************
+#! 14  Tuples
+# *********************************************
+
+# ? A tuple in Python is similar to a list. The difference between the two is that we cannot change the elements of a tuple once it is assigned whereas we can change the elements of a list.
+# ? In short, a tuple is an immutable list. A tuple can not be changed in any way once it is created.
+
+#! Characterstics
+
+# ? Ordered
+# ? Unchangeable
+# ? Allows duplicate
+
+
+# * Plan of attack
+# ? Creating a Tuple
+# ? Accessing items
+# ? Editing items
+# ? Adding items
+# ? Deleting items
+# ? Operations on Tuples
+# ? Tuple Functions
+
+
+# ? empty
+# t1 = ()
+# print(t1)
+# ? create a tuple with a single item
+# t2 = ('hello',)
+# print(t2)
+# print(type(t2))
+# ? homo
+# t3 = (1,2,3,4)
+# print(t3)
+# ? hetro
+# t4 = (1,2.5,True,[1,2,3])
+# print(t4)
+# ? tuple
+# t5 = (1,2,3,(4,5))
+# print(t5)
+# ? using type conversion
+# t6 = tuple('hello')
+# print(t6)
+
+
+#! 14.1  Accessing Items
+# *********************************************
+
+# ? Indexing
+# t3 = (1,2,3,4)
+# print(t3)
+# print(t3[0])
+# print(t3[-1])
+
+# ? Slicing
+# t5[-1][0]
+
+
+#! 14.2  Editing items
+# *********************************************
+
+# print(t3)
+# t3[0] = 100
+# ? immutable just like strings
+
+# ? TypeError: 'tuple' object does not support item assignment
+
+
+#! 14.3  Editing items
+# *********************************************
+
+# print(t3)
+# ? not possible
+
+
+#! 14.4  Deleting items
+# *********************************************
+
+# print(t3)
+# del t3
+# print(t3)
+
+# ? NameError: name 't3' is not defined
+
+
+# print(t5)
+# del t5[-1]
+
+# ? TypeError: 'tuple' object doesn't support item deletion
+
+
+#! 14.5  Operations on Tuples
+# *********************************************
+# ? + and *
+# t1 = (1,2,3,4)
+# t2 = (5,6,7,8)
+
+# print(t1 + t2)
+
+# print(t1*3)
+# ? membership
+# 1 in t1
+# ? iteration
+# for i in t1:
+#   print(i)
+
+
+#! 14.6  Tuple Functions
+# *********************************************
+# ? len/sum/min/max/sorted
+# t = (1,2,3,4)
+# len(t)
+# sum(t)
+# min(t)
+# max(t)
+# sorted(t,reverse=True)
+
+
+# ? count
+# t = (1,2,3,4,5)
+# t.count(50)
+
+
+# ? index
+# t.index(50)         // ValueError: tuple.index(x): x not in tuple
+
+
+# *********************************************
+#! 15  Difference between Lists and Tuples
+# *********************************************
+
+# ? Syntax
+# ? Mutability
+# ? Speed
+# ? Memory
+# ? Built in functionality
+# ? Error prone
+# ? Usability
+
+
+# ? Speed
+# import time
+
+# L = list(range(100000000))
+# T = tuple(range(100000000))
+
+# start = time.time()
+# for i in L:
+#     i*5
+# print('List time',time.time()-start)
+
+# start = time.time()
+# for i in T:
+#     i*5
+# print('Tuple time',time.time()-start)
+
+
+# ? Memory
+# import sys
+
+# L = list(range(1000))
+# T = tuple(range(1000))
+
+# print('List size',sys.getsizeof(L))
+# print('Tuple size',sys.getsizeof(T))
+
+
+# ? Error prone
+# a = [1,2,3]
+# b = a
+
+# a.append(4)
+# print(a)            //  (1, 2, 3, 4)
+# print(b)            //  (1, 2, 3, 4)
+
+
+# a = (1,2,3)
+# b = a
+
+# a = a + (4,)
+# print(a)          //  (1, 2, 3, 4)
+# print(b)          //  (1, 2, 3)
+
+
+#! 15.1  Special Syntax
+# *********************************************
+
+# ? tuple unpacking
+# a,b,c = (1,2,3)
+# print(a,b,c)              //  1 2 3
+
+# a,b = (1,2,3)
+# print(a,b)            //    ValueError: too many values to unpack (expected 2)
+
+
+# a = 1
+# b = 2
+# a,b = b,a
+
+# print(a,b)
+
+
+# a,b,*others = (1,2,3,4)
+# print(a,b)
+# print(others)
+
+
+# ? zipping tuples
+# a = (1,2,3,4)
+# b = (5,6,7,8)
+
+# tuple(zip(a,b))
 
 
 # *****************************************************************************************
@@ -525,6 +1755,41 @@
 # s2 = s1.copy()
 # print(s1)
 # print(s2)
+
+
+# *****************************************************************************************
+
+
+# *********************************************
+#! 17  Frozenset
+# *********************************************
+
+# ? Frozen set is just an immutable version of a Python set object
+
+# ? create frozenset
+# fs1 = frozenset([1,2,3])
+# fs2 = frozenset([3,4,5])
+
+# fs1 | fs2                                 # frozenset({1, 2, 3, 4, 5})
+
+
+# * what works and what does not
+# ? works -> all read functions
+# ? does't work -> write operations
+
+
+# ? When to use
+# ? 2D sets
+# fs = frozenset([1,2,frozenset([3,4])])
+# fs                                        # frozenset({1, 2, frozenset({3, 4})})
+
+
+#! Set Comprehension
+# *******************************************
+
+# ? examples
+
+# {i**2 for i in range(1,11) if i>5}            # {36, 49, 64, 81, 100}
 
 
 # *****************************************************************************************
@@ -724,12 +1989,491 @@
 # }
 
 
+# *****************************************************************************************
 
 
+# *********************************************
+#! 19  FUnctions
+# *********************************************
+# ? functions are basically a block of code. Jisko kuch input dene se Kuch Output milta hai
+# ? Code Reusability
+
+# * principle
+# 1. Abstraction -> means hai but dikh nhi rha
+# 2. Decomposition -> chote chote functions se ek kaam karna
+
+# * Component of function
+
+# def is_even(i):
+#     """
+#     Optional docstring which tells us about the function things
+#     like what inputs are required, what will the function return
+#     """
+#     x=i%2==0
+
+#     return x
+
+# is_even(7)
 
 
+#! 18.8 Let's create a function(with docstring)
+# *********************************************
+# def is_even(num):
+#     """
+#     This function returns if a given number is odd or even
+#     input - any valid integer
+#     output - odd/even
+#     created on - 12th Nov 2023
+#     """
+#     if type(num) == int:
+#         if num % 2 == 0:
+#             return "even"
+#         else:
+#             return "odd"
+#     else:
+#         return "pagal hai kya?"
 
 
+# # function
+# # function_name(input)
+# for i in range(1, 11):
+#     x = is_even(i)
+#     print(x)
+
+# print(is_even.__doc__)
 
 
+# ? 2 Point of views
+# is_even('hello')                      // pagal hai kya?
 
+
+#! 19.2 Parameters Vs Arguments
+# *********************************************
+
+# * Types of Arguments
+# ? Default Argument
+# def power(a=1,b=1):
+#   return a**b
+# ? Positional Argument
+# power(2,3)
+# ? Keyword Argument
+# power(b=3,a=2)
+
+
+#! 19.3 *args and **kwargs
+# *********************************************
+# ?  *args and **kwargs are special Python keywords that are used to pass
+# ?  the variable length of arguments to a function
+
+
+# def mult(a,b,c,d):
+#     return a*b
+# print(mult(2,3))
+
+
+#  *args
+# ? allows us to pass a variable number of non-keyword arguments to a function.
+
+
+# def multiply(*args):
+#     product = 1
+
+#     for i in args:
+#         product = product * i
+
+#     print(args)                 # multiply(1,2,3,4,5,6,7,8,9,10,12)
+#     return product
+
+
+# **kwargs
+# ? **kwargs allows us to pass any number of keyword arguments.
+# Keyword arguments mean that they contain a key-value pair, like a Python dictionary.
+
+
+# def display(**salman):
+#     for key, value in salman.items():
+#         print(key, "->", value)
+
+
+# display(india='delhi',srilanka='colombo',nepal='kathmandu',pakistan='islamabad')
+
+
+#! Points to remember while using *args and **kwargs
+# * order of the arguments matter(normal -> *args -> **kwargs)
+# * The words “args” and “kwargs” are only a convention, you can use any name of your choice
+
+
+# *****************************************************************************************
+
+
+# *********************************************
+#! 20. How Functions are executed in memory?
+# *********************************************
+
+# ? Without return statement
+# L = [1,2,3]
+# print(L.append(4))                      # none
+# print(L)                                # [1,2,3,4]
+
+
+#! 20.1  Global Scope Vs variable scope
+# *********************************************
+# def g(y):
+#     print(x)
+#     print(x + 1)
+# x = 5
+# g(x)
+# print(x)
+
+# ? **********************************
+
+
+# def f(y):
+#     x = 1
+#     x += 1
+#     print(x)
+# x = 5
+# f(x)
+# print(x)
+
+# ? **********************************
+
+
+# def h(y):
+#     x += 1
+# x = 5
+# h(x)
+# print(x)
+
+# ? **********************************
+
+
+# def f(x):
+#     x = x + 1
+#     print("in f(x): x =", x)
+#     return x
+# x = 3
+# z = f(x)
+# print("in main program scope: z =", z)
+# print("in main program scope: x =", x)
+
+
+#! 20.2  Nested Loop
+# *********************************************
+# def f():
+#     def g():
+#         print("inside function g")
+#        # f()
+#     g()
+# print("inside function f")
+
+# f()
+
+# ? ************************************
+
+# def g(x):
+#     def h():
+#         x = 'abc'
+#     x = x + 1
+#     print('in g(x): x =', x)
+#     h()
+#     return x
+
+# x = 3
+# z = g(x)
+
+# ? ************************************
+
+
+# def g(x):
+#     def h(x):
+#         x = x+1
+#         print("in h(x): x = ", x)
+#     x = x + 1
+#     print('in g(x): x = ', x)
+#     h(x)
+#     return x
+
+# x = 3
+# z = g(x)
+# print('in main program scope: x = ', x)
+# print('in main program scope: z = ', z)
+
+
+#! 20.3  Functions are 1st class citizens
+# *********************************************
+
+# ? type and id
+# def square(num):
+#     return num**2
+
+# type(square)
+# id(square)                                # 140471717004784
+
+
+# ? reassign
+# x = square
+# id(x)
+# x(3)                                      # 9
+
+
+# a = 2
+# b = a
+# b
+
+
+# ? deleting a function
+# del square
+
+# square(3)
+
+
+# ? storing
+# L = [1,2,3,4,square]
+# L[-1](3)
+
+# ? In mutable
+# s = {square}
+# s                                        # {<function __main__.square(num)>}
+
+
+# ? returning a function
+# def f():
+#     def x(a, b):
+#         return a+b
+#     return x
+
+# val = f()(3,4)
+# print(val)
+
+# ? function as argument
+# def func_a():
+#     print('inside func_a')
+
+# def func_b(z):
+#     print('inside func_c')
+#     return z()
+
+# print(func_b(func_a))
+
+
+#! 20.4  Benefits of using a Function
+# *********************************************
+# ? Code Modularity
+# ? Code Readability
+# ? Code Reusability
+
+
+# *****************************************************************************************
+
+
+# *********************************************
+#! 21 Lambda Function
+# *********************************************
+# ? A lambda function is a small anonymous function.
+# ? A lambda function can take any number of arguments, but can only have one expression.
+#! syntax
+# ?    lambda a,b : a + b
+
+
+# ? x -> x^2
+# lambda x:x**2                         # <function __main__.<lambda>(x)>
+
+
+# ? x,y -> x+y
+# a = lambda x,y:x+y
+# a(5,2)                                # 7
+
+
+#! 21.1 Diff between lambda vs Normal Function
+# *********************************************
+# ? No name
+# ? lambda has no return value(in fact, returns a function)
+# ? lambda is written in 1 line
+# ? not reusable
+
+#! Then why use lambda functions?
+# * They are used with HOF
+
+
+# ? check if a string has 'a'
+# a = lambda s:'a' in s
+# a('hello')
+
+
+# ? odd or even
+# a = lambda x:'even' if x%2 == 0 else 'odd'
+# a(6)
+
+
+# * Higher Order Functions
+# ? ------------------------------------------
+
+# def cube(x):
+#     return x**3
+
+# ? HOF
+# def transform(f, L):
+#     output = []
+#     for i in L:
+#         output.append(f(i))
+
+#     print(output)
+
+# L = [1, 2, 3, 4, 5]
+
+# transform(cube, L)                  # agar maan lo ab hume idhr square ki jgh cube nikalna hai ya kuch or -> to vha pr hum lambda function use kar lete hai -> taaki bar bar new code na likhna pde
+# transform(lambda x: x**3, L)
+
+
+#! 21.2 Map
+# *********************************************
+
+# ? square the items of a list
+# list(map(lambda x:x**2,[1,2,3,4,5]))
+
+
+# ? odd/even labelling of list items
+# L = [1,2,3,4,5]
+# list(map(lambda x:'even' if x%2 == 0 else 'odd',L))
+
+
+# ? fetch names from a list of dict
+# users = [
+#     {
+#         'name':'Rahul',
+#         'age':45,
+#         'gender':'male'
+#     },
+#     {
+#         'name':'Nitish',
+#         'age':33,
+#         'gender':'male'
+#     },
+#     {
+#         'name':'Ankita',
+#         'age':50,
+#         'gender':'female'
+#     }
+# ]
+
+# list(map(lambda users:users['gender'],users))
+
+
+#! 21.3 Filter
+# *********************************************
+
+# ? numbers greater than 5
+# L = [3,4,5,6,7]
+# list(filter(lambda x:x>5,L))
+
+
+# ? fetch fruits starting with 'a'
+# fruits = ['apple','guava','cherry']
+# list(filter(lambda x:x.startswith('a'),fruits))
+
+
+#! 21.4 Reduce
+# *********************************************
+# ? sum of all item                               -> isme sbse phle import karna hota hai functools ko
+# import functools
+# functools.reduce(lambda x,y:x+y,[1,2,3,4,5])
+
+
+# ? find min
+# functools.reduce(lambda x,y:x if x<y else y,[23,11,45,10,1])
+
+
+# ********************************************************************************************
+
+
+#!                             22. OOPs (objects oriented programming)
+
+
+# *********************************************************************************************
+
+
+# ? 1. class                     -> class is a blueprint
+# ? 2. Object                    -> Object is an instance of a class
+# ? 3. Polymorphism
+# ? 4. Encapsulation
+# ? 5. Inheritance
+# ? 6. Abstraction
+
+
+#! 1. class
+# ********************************
+# classes are the set of rules jinko object follow karte hai.
+
+# L = [1, 2, 3, 4, 5, 6]
+# print(type(L))
+
+# L.Uppercase(L)
+
+
+# ? In class their are two things ti remember
+#  Data or property                  # Function or behavior
+
+
+# * syntax to create a object
+# object_name = class name()
+
+
+#! program 1
+# --------------------
+
+# ? jab bhi hume class ke andr koi variable ke bnane hai to :
+#!     rule no. 1 :
+# *         hum usai constructor ke andr bnayenge
+#!     rule no. 2 :
+# *         jo bhi naam hai uske aage self lgaynge
+
+
+class Atm:
+    # constructor -> constructor is special function jiske paas superpower hai 
+    # isame function ke code ko excute karne ke liye uss fuction ko call karne zarurt nhi hai   
+    def __init__(self):
+        self.pin = ''
+        self.balance = 0  # ye run nhi hoga until object nhi hoga
+        # print("mai to excute ho gya")
+        self.menu()
+        
+    def menu(self):
+        user_input = input("""
+        Hi how can I help you
+        1. Press 1 to create pin
+        2. Press 2 to change pin
+        3. Press 3 to check balance
+        4. Press 4 to withdraw
+        5. Anything else to exit       
+        """)
+
+        if user_input == '1':
+            # create pin
+            self.create_pin()
+        elif user_input == '2':
+            # change pin
+            pass
+        elif user_input == '3':
+            # check balance 
+            pass
+        elif user_input == '4':
+            # withdraw
+            pass
+        else:
+            exit()
+        
+        
+        
+def create_pin(self):
+    user_pin = input('Enter your PIN number :')        
+    self.pin = user_pin
+    
+    user_balance = int(input('Enter your balance :'))
+    self.balance = user_balance
+    
+    
+    print('Pin Created Successfully')
+    
+    
+obj = Atm()      
