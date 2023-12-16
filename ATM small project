@@ -1,0 +1,92 @@
+
+class Atm:
+        def __init__(self):
+        self.pin = ""
+        self.balance = 0  
+        # print("mai to excute ho gya")
+        self.menu()
+        
+    def create_pin(self):
+        user_pin = input("Enter your PIN number :")
+        self.pin = user_pin
+
+        user_balance = int(input("Enter your balance :"))
+        self.balance = user_balance
+
+        print("Pin Created Successfully")
+        self.menu()
+
+    def change_pin(self):
+        old_pin = input("Enter old PIN number :")
+
+        if old_pin == self.pin:
+            # let him change the pin
+            new_pin = input("Enter new PIN number :")
+            self.pin = new_pin
+            print("PIN Changed Successfully")
+            self.menu()
+        else:
+            print("PIN sahi nhi hai re baba")
+            self.menu()   
+
+
+    def check_balance(self):
+        user_pin = input("Enter new PIN number : ")
+
+        if user_pin == self.pin:
+            print("Your Balance is : ", self.balance)
+            
+        else:
+            print("PIN yaad karke aa re baba : ")
+            self.menu()
+
+
+    def withdraw(self):
+        user_pin = input("Enter your PIN number :")
+        
+        if user_pin == self.pin:
+            user_amount = int(input("Enter amount to withdraw :"))
+            if user_amount <= self.balance:
+                self.balance = self.balance - user_amount
+                print("Amount Withdrawn Successfully")
+                self.menu()
+            else:
+                print("beta aukat me rho ")
+                self.menu()
+        
+        else:
+            print("PIN sahi nhi hai re baba")
+            self.menu()        
+
+
+    def menu(self):
+        user_input = input(
+            """
+        Hi how can I help you
+        1. Press 1 to create pin
+        2. Press 2 to change pin
+        3. Press 3 to check balance
+        4. Press 4 to withdraw
+        5. Anything else to exit       
+        """
+        )
+
+        if user_input == "1":
+            # create pin
+            self.create_pin()
+        elif user_input == "2":
+            # change pin
+            self.change_pin()
+            pass
+        elif user_input == "3":
+            # check balance
+            self.check_balance()
+            pass
+        elif user_input == "4":
+            # withdraw
+            self.withdraw()
+            pass
+        else:
+            exit()
+
+obj = Atm()
