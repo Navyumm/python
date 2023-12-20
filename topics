@@ -2477,3 +2477,611 @@ def create_pin(self):
     
     
 obj = Atm()      
+
+
+
+# ? ----------------------------------------------------------------------------------------------------------
+
+
+#!                                         Reference Variables
+# ? https://colab.research.google.com/drive/1F3Y_zoZH0BDdvcFwrHS46YXj8CCNDRqn?usp=sharing#scrollTo=HRV0i93nzBtZ
+
+
+# ? ------------------------------------------------------------------------------------------------------------
+
+
+# ? Reference variables hold the objects
+# ? We can create objects without reference variable as well
+# ? An object can have multiple reference variables
+# ? Assigning a new reference variable to an existing object does not create a new object
+
+
+# * object without a reference
+# class Person:
+#     def __init__(self):
+#         self.name = "navyum"
+#         self.gender = "male"
+
+
+# p = Person()
+# q = p
+
+
+# ? Multiple ref
+# print(id(p))
+# print(id(q))
+
+#! change attribute value with the help of 2nd object
+# print(p.name)                               # navyum
+# print(q.name)                               # navyum
+# q.name = 'ankit'
+# print(q.name)                               # ankit
+# print(p.name)                               # ankit
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                                  Pass by reference
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+# class Person:
+#     def __init__(self, name, gender):
+#         self.name = name
+#         self.gender = gender
+
+
+#! outside the class -> function
+# def greet(person):
+#     print("Hi my name is", person.name, "and I am a", person.gender)
+#     p1 = Person("ankit", "male")
+#     return p1
+
+
+# p = Person("navyum", "male")
+# x = greet(p)
+# print(x.name)
+# print(x.gender)
+
+# ? -----------------------------------------------------------
+
+
+# class Person:
+#     def __init__(self, name, gender):
+#         self.name = name
+#         self.gender = gender
+
+
+#! outside the class -> function
+# def greet(person):
+#     print(id(person))
+#     person.name = "ankit"
+#     print(person.name)
+
+
+# p = Person("navyum", "male")
+# print(id(p))
+# greet(p)
+# print(p.name)
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                                  Object ki mutebility
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+# class Person:
+#     def __init__(self, name, gender):
+#         self.name = name
+#         self.gender = gender
+
+
+#! outside the class -> function
+# def greet(person):
+#     person.name = "ankit"
+#     return person
+
+
+# p = Person("navyum", "male")
+# print(id(p))                                     # 140655555218960
+# p1 = greet(p)
+# print(id(p1))                                    # 140655555218960
+
+
+# **************************************************************************************************************
+# **************************************************************************************************************
+
+#!                                              Encapsulation
+
+# **************************************************************************************************************
+# **************************************************************************************************************
+
+#! instance var -> python tutor
+# class Person:
+
+#     def __init__(self,name_input,country_input):
+#         self.name = name_input                             #? self ke baad jo .name hai usai instance var bolte hai
+#         self.country = country_input                       #? isme ek var me baar baar hum alg alg value output karwa sakte hai
+
+# p1 = Person('navyum','india')
+# p2 = Person('steve','australia')
+
+# ? --------------------------------------
+
+
+# class Atm:
+#     def __init__(self):
+#         self.pin = ""
+#         self.__balance = 0                                  # private variablw
+#         self.menu()
+
+# #? -----------------------------------------
+# #! for getter use
+#     def get_balance(self):
+#         return self.__balance
+
+#     # def set_balance(self, new_value):
+#     #     self.__balance = new_value
+
+#     def set_balance(self, new_value):
+#         if type(new_value) == int:
+#             self.__balance = new_value
+#         else:
+#             print("beta bohot marenge")
+
+# #? -----------------------------------------
+
+#     def create_pin(self):
+#         user_pin = input("Enter your PIN number :")
+#         self.pin = user_pin
+
+#         user_balance = int(input("Enter your balance :"))
+#         self.__balance = user_balance
+
+#         print("Pin Created Successfully")
+#         self.menu()
+
+
+#     def change_pin(self):
+#         old_pin = input("Enter old PIN number :")
+
+#         if old_pin == self.pin:
+#             new_pin = input("Enter new PIN number :")
+#             self.pin = new_pin
+#             print("PIN Changed Successfully")
+#             self.menu()
+#         else:
+#             print("PIN sahi nhi hai re baba")
+#             self.menu()
+
+
+#     def check_balance(self):
+#         user_pin = input("Enter new PIN number : ")
+
+#         if user_pin == self.pin:
+#             print("Your Balance is : ", self.__balance)
+
+#         else:
+#             print("PIN yaad karke aa re baba : ")
+#             self.menu()
+
+
+#     def withdraw(self):
+#         user_pin = input("Enter your PIN number :")
+
+#         if user_pin == self.pin:
+#             user_amount = int(input("Enter amount to withdraw :"))
+#             if user_amount <= self.__balance:
+#                 self.__balance = self.__balance - user_amount
+#                 print("Amount Withdrawn Successfully")
+#                 self.menu()
+#             else:
+#                 print("beta aukat me rho ")
+#                 self.menu()
+
+#         else:
+#             print("PIN sahi nhi hai re baba")
+#             self.menu()
+
+
+#     def menu(self):
+#         user_input = input(
+#             """
+#         Hi how can I help you
+#         1. Press 1 to create pin
+#         2. Press 2 to change pin
+#         3. Press 3 to check balance
+#         4. Press 4 to withdraw
+#         5. Anything else to exit
+#         """
+#         )
+#         if user_input == "1":
+#             # create pin
+#             self.create_pin()
+#         elif user_input == "2":
+#             # change pin
+#             self.change_pin()
+#             pass
+#         elif user_input == "3":
+#             # check balance
+#             self.check_balance()
+#             pass
+#         elif user_input == "4":
+#             # withdraw
+#             self.withdraw()
+#             pass
+#         else:
+#             exit()
+
+
+# obj = Atm()
+
+# ? maan lo senior ne class bnai hai h or junior masti ke liye usai bahar se change kar de
+# ? jab hum private method ya varible bnate hai to uske name changes ho jaate hai
+# * like: __balance ki jgh _Atm__balance ho jayega
+# obj.create_pin()
+# obj._Atm__balance = 'hehehe'5
+# obj.get_balance()
+
+# obj.set_balance(5000)
+# obj.withdraw(5000)                                      # not supported between instances of 'int' and 'str'
+
+
+#! So,in python there is nothing truly private
+# * like other languages
+
+#! Question is why ???????
+# ? because python is programming langauge made for adluts
+
+
+#! After that 1 new programmer aata hai jo
+# ? jo accha hai kaam karne me and he truly needs to accesss that variable for changes
+# ? so ek tarika\ concept nikala gya
+# ? ki jb bhi humm kisi varible ko private karte hai
+# ? it means uski value class ke bahar available nhi hai but inside class hai
+# ? it means hmari class ke jo andr ke methods hai vo
+# ? class ke andr ke data ko/ private data ko bhi access kar skte hai
+# ? isiliye kyu na hum iska method bna de jisse through iss variable ka value bahar dikha paaye
+# * to yhi par concept aata hai getter and seter method ka
+
+# ? so every data we have in our class we create two methods
+# * 1. getter   -> iska kaam hai values ko bahar dikhana
+# * 2. setter   -> iska kaam hai bahar se values ko change karwana
+
+
+#! iss puri process ko hum Encapsulation bolte hai
+# ? Encapsulation means capsuls -> jisme alg alg medicine ka mixture daalkr kr ek capsul me daal dete hai
+#! so encapsulation yhi se aa rha h
+# ? jab data or uske 2 methods (getter and setter) ko mila diya
+# ? to vhi hai encapsulation
+
+#! zarurat kya hai ???
+# ? zarurat ye hai ki aapko apne data ko pvt bnana hai
+# ? kyoki direct access mila to koi bhi aapko rula dega
+# * lekin data show bhi karna hai
+
+
+#! so in teachnically
+# ? we need to create one set of getter and setter for our atributes
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                                  list of objects
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+# class Person:
+
+#     def __init__(self,name,gender):
+#         self.name = name
+#         self.gender = gender
+
+# p1 = Person('navyum','male')
+# p2 = Person('ankit','male')
+# p3 = Person('ankita','female')
+
+# L = [p1,p2,p3]
+
+# print(L)
+# for i in L:
+#     print(i.name,i.gender)
+
+
+#! list of objects
+# class Person:
+
+#     def __init__(self,name,gender):
+#         self.name = name
+#         self.gender = gender
+
+# p1 = Person('navyum','male')
+# p2 = Person('ankit','male')
+# p3 = Person('ankita','female')
+
+# d = {'p1':p1,'p2':p2,'p3':p3}
+
+# for i in d:
+#     print(d[i].name)
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                          Static Variables (Vs Instance variables)
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+# * we are taking atm class again
+#! ab isme maan lo counter lgane ki need pdh gyi for unique coustmer id's
+
+# class Atm:
+
+#     __counter = 1
+
+#     def __init__(self):
+#         self.pin = ""
+#         self.__balance = 0                                  # private variable
+#         # self.cid = 0
+#         # self.cid +=1
+#         self.cid = Atm.__counter
+#         Atm.__counter =  Atm.__counter + 1
+#         # self.menu()
+
+# #? -----------------------------------------
+# #*  Utility function : chhote mote kaam karne ke liye use me aate hai
+#     @staticmethod                 # -->> which means object bnane ki zaroorat nhi hai iss method ko access karne ke liye
+#     def get_counter():              # hum iss method ko direct access kar skte hai with class name kw sath
+#         return Atm.__counter            # like : Atm.__counter
+# #? -----------------------------------------
+# #? -----------------------------------------
+# #! for getter use
+#     def get_balance(self):
+#         return self.__balance
+
+#     # def set_balance(self, new_value):
+#     #     self.__balance = new_value
+
+#     def set_balance(self, new_value):
+#         if type(new_value) == int:
+#             self.__balance = new_value
+#         else:
+#             print("beta bohot marenge")
+
+# #? -----------------------------------------
+
+#     def create_pin(self):
+#         user_pin = input("Enter your PIN number :")
+#         self.pin = user_pin
+
+#         user_balance = int(input("Enter your balance :"))
+#         self.__balance = user_balance
+
+#         print("Pin Created Successfully")
+#         self.menu()
+
+
+#     def change_pin(self):
+#         old_pin = input("Enter old PIN number :")
+
+#         if old_pin == self.pin:
+#             new_pin = input("Enter new PIN number :")
+#             self.pin = new_pin
+#             print("PIN Changed Successfully")
+#             self.menu()
+#         else:
+#             print("PIN sahi nhi hai re baba")
+#             self.menu()
+
+
+#     def check_balance(self):
+#         user_pin = input("Enter new PIN number : ")
+
+#         if user_pin == self.pin:
+#             print("Your Balance is : ", self.__balance)
+
+#         else:
+#             print("PIN yaad karke aa re baba : ")
+#             self.menu()
+
+
+#     def withdraw(self):
+#         user_pin = input("Enter your PIN number :")
+
+#         if user_pin == self.pin:
+#             user_amount = int(input("Enter amount to withdraw :"))
+#             if user_amount <= self.__balance:
+#                 self.__balance = self.__balance - user_amount
+#                 print("Amount Withdrawn Successfully")
+#                 self.menu()
+#             else:
+#                 print("beta aukat me rho ")
+#                 self.menu()
+
+#         else:
+#             print("PIN sahi nhi hai re baba")
+#             self.menu()
+
+
+#     def menu(self):
+#         user_input = input(
+#             """
+#         Hi how can I help you
+#         1. Press 1 to create pin
+#         2. Press 2 to change pin
+#         3. Press 3 to check balance
+#         4. Press 4 to withdraw
+#         5. Anything else to exit
+#         """
+#         )
+#         if user_input == "1":
+#             # create pin
+#             self.create_pin()
+#         elif user_input == "2":
+#             # change pin
+#             self.change_pin()
+#             pass
+#         elif user_input == "3":
+#             # check balance
+#             self.check_balance()
+#             pass
+#         elif user_input == "4":
+#             # withdraw
+#             self.withdraw()
+#             pass
+#         else:
+#             exit()
+
+# #? -------------------
+# Atm.counter = "hehehe"
+# #? -------------------
+# #? -------------------------------------
+# # for coustomers
+# c1 = Atm()
+# print(c1)
+# c2 = Atm()
+# print(c2)
+# c3 = Atm()
+# print(c3)
+
+
+# print(c1.cid)
+# print(c2.cid)
+# # print(c3.cid)
+
+# # print(Atm.counter)
+
+
+# ? this is not the right way to create a unique coustomer id's
+# because for every coustomer constructor ka code excute hoga
+# so udhr humne 0 se initiate kiya h
+# So hrr bar CID initiate hoga or 0 se bdhkr 1 ho jaayega
+
+# because these 3 are instance variable -> are those jiska value hrr object ke liye alag hota hai
+
+
+#! so here we required static varible
+# * static variable --->>> class ka variable hota hai
+# ? it meams static variable ka value hrr object same hota hai
+
+# * instance variable ---->>> object ka variable hota hai
+# ? it meams instance variable ka value hrr object ke liye alg alg hota hai
+
+
+#! Example :
+# ? create a bank class
+# ab isme coustomer ka name : instance
+# coustomer ka balance : instance
+# IFSC code : static
+# hoga
+
+# ? a website for college
+# student CGPA : instance
+# college name : static
+# student name : instance
+# University name : static
+# degree name : static
+
+
+#! Now ye chij yaad rakhne ki hai ki
+# ? instance variable constructor ke andr define hota hai
+# ? static sbhi methods ke bahar, class ke andr define hota hai
+
+
+#! pta lgane ka tarika
+# * agr self ke sath variable name ho to vo instancce variable h
+# * agr class name ke sath variable name ho to vo static variable h
+
+
+# **************************************************************************************************************
+# **************************************************************************************************************
+
+#!                                              Inheritance
+# ?              https://colab.research.google.com/drive/1_Pd9W1yltcfPNGPj6oDqIM5m7sadegcY?usp=sharing
+
+# **************************************************************************************************************
+# **************************************************************************************************************
+
+
+#! Class Relationships
+# ? Aggregation
+# ? Inheritance
+
+
+# * Aggregation (Has-A relationship)
+# ? means One class owns the another class
+# ? like :
+# customer has A Address
+
+
+# example
+# class Customer:
+#     def __init__(self, name, gender, address):
+#         self.name = name
+#         self.gender = gender
+#         self.address = address
+
+#     def print_address(self):
+#         print(self.address._Address__city, self.address.pin, self.address.state)
+
+#     def edit_profile(self, new_name, new_city, new_pin, new_state):
+#         self.name = new_name
+#         self.address.edit_address(new_city, new_pin, new_state)
+
+
+# class Address:
+#     def __init__(self, city, pin, state):
+#         self.__city = city
+#         self.pin = pin
+#         self.state = state
+
+#     def get_city(self):
+#         return self.__city
+
+#     def edit_address(self, new_city, new_pin, new_state):
+#         self.__city = new_city
+#         self.pin = new_pin
+#         self.state = new_state
+
+
+# add1 = Address("panipat", 132103, "haryana")
+# cust = Customer("navyum", "male", add1)
+
+# cust.print_address()
+
+# cust.edit_profile("ankit", "mumbai", 111111, "maharastra")
+# cust.print_address()
+# # method example
+# # what about private attribute
+
+
+
+
+
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                                Class Diagram Aggrigation
+#?                                   ./C Aggregation.png
+
+# ? --------------------------------------------------------------------------------------
+
+
+
+
+
+
