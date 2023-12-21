@@ -2419,65 +2419,347 @@ L = [20, "Jess", 35.32, [30, 50, 44]]
 # object_name = class name()
 
 
-#! program 1
+#! program 1 - ATM
 # --------------------
 
-# ? jab bhi hume class ke andr koi variable ke bnane hai to :
+# ? jab bhi hume class ke andr koi vari
+# able ke bnane hai to :
 #!     rule no. 1 :
 # *         hum usai constructor ke andr bnayenge
 #!     rule no. 2 :
 # *         jo bhi naam hai uske aage self lgaynge
 
 
-class Atm:
-    # constructor -> constructor is special function jiske paas superpower hai 
-    # isame function ke code ko excute karne ke liye uss fuction ko call karne zarurt nhi hai   
-    def __init__(self):
-        self.pin = ''
-        self.balance = 0  # ye run nhi hoga until object nhi hoga
-        # print("mai to excute ho gya")
-        self.menu()
-        
-    def menu(self):
-        user_input = input("""
-        Hi how can I help you
-        1. Press 1 to create pin
-        2. Press 2 to change pin
-        3. Press 3 to check balance
-        4. Press 4 to withdraw
-        5. Anything else to exit       
-        """)
+# class Atm:
+#     # constructor -> constructor is special function jiske paas superpower hai
+#     # isame function ke code ko excute karne ke liye uss fuction ko call karne zarurt nhi hai
+#     def __init__(self):
+#         self.pin = ""
+#         self.balance = 0  # ye run nhi hoga until object nhi hoga
+#         # print("mai to excute ho gya")
+#         self.menu()
 
-        if user_input == '1':
-            # create pin
-            self.create_pin()
-        elif user_input == '2':
-            # change pin
-            pass
-        elif user_input == '3':
-            # check balance 
-            pass
-        elif user_input == '4':
-            # withdraw
-            pass
-        else:
-            exit()
-        
-        
-        
-def create_pin(self):
-    user_pin = input('Enter your PIN number :')        
-    self.pin = user_pin
-    
-    user_balance = int(input('Enter your balance :'))
-    self.balance = user_balance
-    
-    
-    print('Pin Created Successfully')
-    
-    
-obj = Atm()      
+#     def create_pin(self):
+#         user_pin = input("Enter your PIN number :")
+#         self.pin = user_pin
 
+#         user_balance = int(input("Enter your balance :"))
+#         self.balance = user_balance
+
+#         print("Pin Created Successfully")
+#         self.menu()
+
+
+#     def change_pin(self):
+#         old_pin = input("Enter old PIN number :")
+
+#         if old_pin == self.pin:
+#             # let him change the pin
+#             new_pin = input("Enter new PIN number :")
+#             self.pin = new_pin
+#             print("PIN Changed Successfully")
+#             self.menu()
+#         else:
+#             print("PIN sahi nhi hai re baba")
+#             self.menu()
+
+
+#     def check_balance(self):
+#         user_pin = input("Enter new PIN number : ")
+
+#         if user_pin == self.pin:
+#             print("Your Balance is : ", self.balance)
+
+#         else:
+#             print("PIN yaad karke aa re baba : ")
+#             self.menu()
+
+
+#     def withdraw(self):
+#         user_pin = input("Enter your PIN number :")
+
+#         if user_pin == self.pin:
+#             user_amount = int(input("Enter amount to withdraw :"))
+#             if user_amount <= self.balance:
+#                 self.balance = self.balance - user_amount
+#                 print("Amount Withdrawn Successfully")
+#                 self.menu()
+#             else:
+#                 print("beta aukat me rho ")
+#                 self.menu()
+
+#         else:
+#             print("PIN sahi nhi hai re baba")
+#             self.menu()
+
+
+#     def menu(self):
+#         user_input = input(
+#             """
+#         Hi how can I help you
+#         1. Press 1 to create pin
+#         2. Press 2 to change pin
+#         3. Press 3 to check balance
+#         4. Press 4 to withdraw
+#         5. Anything else to exit
+#         """
+#         )
+#         if user_input == "1":
+#             # create pin
+#             self.create_pin()
+#         elif user_input == "2":
+#             # change pin
+#             self.change_pin()
+#             pass
+#         elif user_input == "3":
+#             # check balance
+#             self.check_balance()
+#             pass
+#         elif user_input == "4":
+#             # withdraw
+#             self.withdraw()
+#             pass
+#         else:
+#             exit()
+
+
+# obj = Atm()
+
+# ? -----------------------------------------------------------------------------------
+
+
+#!                            Methods VS Functions
+
+
+# ? --------------------------------------------------------------------------------------
+
+#! Difference between methods and Functions
+# ? Class ke andr jab hum functions ko bnate hai -> usai methods bolte hai
+# ? baaki independend functions ko hum functions hi bolte hai (Outside of class)
+
+# L = [1,2,3]
+# len(L)                      # function : bcos it is outside of list class
+# L.append(4)                 # Methods : bcos it is inside the list class
+
+
+# *******************************
+#! Class Diagram
+# *******************************
+
+
+# ? -----------------------------------------------------------------------------------
+
+
+#!                            Magic Methods (Dunder Methods)
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                  Magic Method -> Special -> Super Power
+# *                  __name__       or              __init__
+# ? there are more than 5000 magic methods in python -> inse hum khud ka data types bna skte hai
+
+
+#! Constructor : It' a method (special -> super power) ->
+# ?              means isko bina call kiye use kar sakte hai (jaise hi object bnta hai ye automatic trigger ho jata hai)
+
+
+# *                                  Or
+# ?  Constructor me vo aata hai jiska control hum user ko nhi dena chahte
+# ?  ye bina user ke puchte hi shoe ho jaati hai
+# ?  like example of ATM code above and
+# ?  Like we flipkart hum user ko payment ka control de denge, feedback ka de denge
+# ?  but internet se connect hone ka ya some other details nhi denge
+
+# ? let programmer God hai or Earth class hai or humans Object hai to constructor kya hoga?
+#! Death
+
+
+# ? -----------------------------------------------------------------------------------
+
+
+#!                                     Self
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+# ? Self is nothing but the other name of object
+# ? In OOP Class ko bss object hi call kar skta hai
+
+
+# ? but if hume class ke ek function ko dusre function se call karwana hota hai
+# ? to udhr hume as a argument self input dena hota hai
+
+# ? nhi to hum usai acces nhi kar payenge
+
+#! example :
+# ? ATM program me hum self.menu, self.pin, set.balance
+# ? call isiliye karwa paa rhe hai
+# ? if hum self nhi likhenge to error aa jayega
+
+# * if hum self or obj ka
+# ? id lgakr memory location check kare to dono same jgh pr dikhte hai
+# ? jo ye proove karta hai
+# ? ki dono ek hi hai (Gangadhar hi shaktimaan hai)
+
+
+# ? -----------------------------------------------------------------------------------
+
+
+#!              Now we going to create our first data type (fraction)
+
+
+# ? --------------------------------------------------------------------------------------
+
+# class Fraction:
+
+#     # parameterized constructor  -> are those jinko input ki zaroorat hoti hai
+#     def __init__(self,x,y):
+#         self.num = x
+#         self.den = y
+
+#     def __str__(self):
+#         # return "idhar"
+#         return "{}/{}".format(self.num,self.den)
+
+#     def __add__(self,other):
+#         # print('idhar')
+#         new_num = self.num*other.den + other.num*self.den
+#         new_den = self.den*other.den
+
+#         return "{}/{}".format(new_num,new_den)
+
+#     def __sub__(self,other):
+#         # print('idhar')
+#         new_num = self.num*other.den - other.num*self.den
+#         new_den = self.den*other.den
+
+#         return "{}/{}".format(new_num,new_den)
+
+#     def __mul__(self,other):
+#         # print('idhar')
+#         new_num = self.num*other.num
+#         new_den = self.den*other.den
+
+#         return "{}/{}".format(new_num,new_den)
+
+#     def __truediv__(self,other):
+#         # print('idhar')
+#         new_num = self.num*other.den
+#         new_den = self.den*other.num
+
+#         return "{}/{}".format(new_num,new_den)
+
+#     def convert_to_decimal(self):                   #? khud ka magic method bhi bna sakte hai
+#         return self.num/self.den
+
+# # fr1 = Fraction()
+# fr1 = Fraction(3,4)
+# fr2 = Fraction(1,4)
+
+# print(fr1)
+# print(fr1 + fr2)                    # unsupported operand type(s) for +: 'Fraction' and 'Fraction'
+# print(fr1 - fr2)                    # unsupported operand type(s) for +: 'Fraction' and 'Fraction'
+# print(fr1 * fr2)
+# print(fr1 / fr2)
+# print(fr1.convert_to_decimal())
+# # print(type(fr1))
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!              Now we going to create our first data type (fraction)
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+# class Point:
+
+#     def __init__(self,x,y):
+#         self.x_cod = x
+#         self.y_cod = y
+
+#     def __str__(self):
+#         return '<{},{}>'.format(self.x_cod, self.y_cod)
+
+#     def euclidean_distance(self,other):
+#         return ((self.x_cod - other.x_cod)**2 + (self.y_cod - other.y_cod)**2)**0.5
+
+#     def distance_from_origin(self):
+#         return (self.x_cod**2 + self.y_cod**2)**0.5
+#         # return self.euclidean_distance(Point(0,0))
+
+
+# class Line:
+
+#     def __init__(self,A,B,C):
+#         self.A = A
+#         self.B = B
+#         self.C = C
+
+
+#     def __str__(self):
+#         return '{}x + {}y + {} = 0'.format(self.A, self.B, self.C)
+
+#     def point_on_line(line,point):
+#         if line.A*point.x_cod + line.B*point.y_cod + line.C == 0:
+#             return "lies on the line"
+#         else:
+#             return "does not lie on the line"
+
+#     def shortest_distance(line,point):
+#         return abs(line.A*point.x_cod + line.B*point.y_cod + line.C)/(line.A**2 + line.B**2)**0.5
+#         # return abs(self.A*point.x_cod + self.B*point.y_cod + self.C)/self.A
+
+# l1 = Line(1,1,-2)
+# p1 = Point(1,10)
+# print(l1)
+# print(p1)
+
+# print(l1.shortest_distance(p1))
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                         How objects access attributes
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+# class Person:
+#     def __init__(self, name_input, country_input):
+#         self.name = name_input
+#         self.country = country_input
+
+#     def greet(self):
+#         if self.country == "india":
+#             print("Namaste", self.name)
+#         else:
+#             print("Hello", self.name)
+
+
+# ? how to access attributes
+# p = Person('navyum','india')
+
+# ? how to access methods
+# p.greet()
+
+# ? what if i try to access non-existent attributes
+# p.gender                                    # 'Person' object has no attribute 'gender'
+
+
+#! Attribute creation from outside of the class
+# * ---------------------------------------------------
+
+# p.gender = 'male'
+
+# p.gender                                    # now, it will give the answer
 
 
 # ? ----------------------------------------------------------------------------------------------------------
@@ -2607,8 +2889,8 @@ obj = Atm()
 # class Person:
 
 #     def __init__(self,name_input,country_input):
-#         self.name = name_input                             #? self ke baad jo .name hai usai instance var bolte hai
-#         self.country = country_input                       #? isme ek var me baar baar hum alg alg value output karwa sakte hai
+#         self._name = name_input                             #? self ke baad jo .name hai usai instance var bolte hai
+#         self.country = country_input                        #? isme ek var me baar baar hum alg alg value output karwa sakte hai
 
 # p1 = Person('navyum','india')
 # p2 = Person('steve','australia')
@@ -3067,18 +3349,664 @@ obj = Atm()
 # # what about private attribute
 
 
-
-
-
-
-
 # ? --------------------------------------------------------------------------------------
 
 
 #!                                Class Diagram Aggrigation
-#?                                   ./C Aggregation.png
+# ?                                   ./C Aggregation.png
 
 # ? --------------------------------------------------------------------------------------
+
+
+# ? --------------------------------------------------------------------------------------
+
+
+#!                                      Inheritance
+# ?                                   ./C Inheritance.png
+
+# ? --------------------------------------------------------------------------------------
+
+
+# * What is inheritance
+# ? Example
+# ? What gets inherited?
+
+
+# ? Jo baap ka hai vo sb bete ka hai
+#! iske class diagram me triagnle se connect hota h parent se
+
+
+#! Example
+# parent
+# class User:
+#     def __init__(self):
+#         self.name = "navyum"
+#         self.gender = "male"
+
+#     def login(self):
+#         print("login")
+
+
+# child
+# class Student(User):                #? child class me parents ka naam likh diya
+# def __init__(self):           #? means Inherit ho gya
+#     self.rollno = 100
+
+# def enroll(self):
+#     print("enroll into the course")
+
+
+# u = User()
+# s = Student()
+
+# print(s.name)
+# s.login()
+# s.enroll()
+
+
+#! What gets inherited ???
+# ?-----------------------------
+
+# ? Constructor
+# ? Non Private Attributes
+# ? Non Private Methods
+
+
+# * constructor example
+
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     pass                                    # if child ke paas khud ka constructoor nhi h to parents ka call hota hai
+
+# s=SmartPhone(20000, "Apple", 13)            # Inside phone constructor
+# s.buy()                                   # Buying a phone
+
+# ? -----------------------------------------------------------------------------
+
+
+#! constructor example 2
+
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+# class SmartPhone(Phone):
+#     def __init__(self, os, ram):
+#         self.os = os
+#         self.ram = ram
+#         print ("Inside SmartPhone constructor")         # if khud ka hai to yhi call hoga
+
+# s=SmartPhone("Android", 2)
+# ? or if khud ka constructor use ho gya means parents waale ke variable kbhi initialize hue hi nhi
+# ? so
+# s.brand                         #  'SmartPhone' object has no attribute 'brand'
+# ? karne se error aayega
+
+# ? -----------------------------------------------------------------------------
+
+
+#! child can't access private members of the class
+
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     #getter
+#     def show(self):
+#         print (self.__price)
+
+# class SmartPhone(Phone):
+#     def check(self):
+#         print(self.__price)
+
+# s=SmartPhone(20000, "Apple", 13)
+# print(s.brand)                           # Apple
+# s.check()                                #  no attribute
+# s.show()
+
+
+#! Practice ::::::::::::::::::
+
+# class Parent:
+
+#     def __init__(self,num):
+#         self.__num=num
+
+#     def get_num(self):
+#         return self.__num
+
+# class Child(Parent):
+
+#     def show(self):
+#         print("This is in child class")
+
+# son=Child(100)
+# print(son.get_num())
+# son.show()
+
+
+# ? ----------------------------------------------
+
+
+# class Parent:
+
+#     def __init__(self,num):
+#         self.__num=num
+
+#     def get_num(self):
+#         return self.__num
+
+# class Child(Parent):
+
+#     def __init__(self,val,num):
+#         self.__val=val
+
+#     def get_val(self):
+#         return self.__val
+
+# son=Child(100,10)
+# print("Parent: Num:",son.get_num())
+# print("Child: Val:",son.get_val())
+
+
+# ? ----------------------------------------------
+
+
+# class A:
+#     def __init__(self):
+#         self.var1=100
+
+#     def display1(self,var1):
+#         print("class A :", self.var1)
+
+
+# class B(A):
+
+#     def display2(self,var1):
+#         print("class B :", self.var1)
+
+# obj=B()
+# obj.display1(200)
+
+
+# ? ---------------------------------------------------------------------------------------------
+
+#!                                     Method Overriding
+
+# ? ---------------------------------------------------------------------------------------------
+
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     def buy(self):
+#         print ("Buying a smartphone")
+
+# s=SmartPhone(20000, "Apple", 13)
+
+# s.buy()
+
+
+# ? jab same naam se method parents or child dono ke paas ho
+# ? to usai method overriding bolte hai
+# ? and method call child waale ka hi hoga
+
+
+# ? ---------------------------------------------------------------------------------------------
+
+#!   (vvp)                                   Super Keyword
+
+# ? ---------------------------------------------------------------------------------------------
+
+# ? super is a way to access parents ke methods
+
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     def buy(self):
+#         print ("Buying a smartphone")
+#         # syntax to call parent ka buy method
+#         super().buy()
+
+# s=SmartPhone(20000, "Apple", 13)
+
+# s.buy()
+
+
+# ?------------------------------------------
+
+
+#! using super outside the class
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     def buy(self):
+#         print ("Buying a smartphone")
+#         # syntax to call parent ka buy method
+#         # super().buy()
+
+# s=SmartPhone(20000, "Apple", 13)
+
+# s.super().buy()
+# ? ye hume error dega because super ka use bss hum class ke andr hi kar sakte hai
+# ? vo bhi child class ke andr
+
+
+# ?------------------------------------------
+
+
+#! can super access parent ka data?
+#! using super outside the class
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     def buy(self):
+#         print ("Buying a smartphone")
+#         # syntax to call parent ka buy method
+#         print(super().brand)
+
+# ? super keyword se bss hum parents ke methods hi access kr sakte hai
+# ? parents ke attributes nhi
+
+# s=SmartPhone(20000, "Apple", 13)
+
+# s.buy()
+
+# ?------------------------------------------
+
+
+#! super -> constuctor
+# ? by using this method hum parents or child dono ke constructor ko call karwa lete hai
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+# class SmartPhone(Phone):
+#     def __init__(self, price, brand, camera, os, ram):
+#         print('Inside smartphone constructor')
+#         super().__init__(price, brand, camera)
+#         self.os = os
+#         self.ram = ram
+#         print ("Inside smartphone constructor")
+
+# s=SmartPhone(20000, "Samsung", 12, "Android", 2)
+
+# print(s.os)
+# print(s.brand)
+
+# ?------------------------------------------
+
+#! sumurise about super :
+# ? super can not access variables
+# ? super can not be used outside the class
+# ? super is always used inside the child class
+
+# * ------------------------------------------
+
+#! Inheritance in summary
+# A class can inherit from another class. ✅
+# Inheritance improves code reuse  ✅
+# Constructor, attributes, methods get inherited to the child class  ✅
+# The parent has no access to the child class  ✅
+# Private properties of parent are not accessible directly in child class  ✅
+# Child class can override the attributes or methods. This is called method overriding  ✅
+# super() is an inbuilt function which is used to invoke the parent class methods and constructor  ✅
+
+
+# * ------------------------------------------
+
+
+#! Practice Questions
+
+# class Parent:
+#     def __init__(self, num):
+#         self.__num = num
+
+#     def get_num(self):
+#         return self.__num
+
+
+# class Child(Parent):
+#     def __init__(self, num, val):
+#         super().__init__(num)
+#         self.__val = val
+
+#     def get_val(self):
+#         return self.__val
+
+
+# son = Child(100, 200)
+# print(son.get_num())            # 100
+# print(son.get_val())            # 200
+
+#!----------------------------------------------
+
+
+# class Parent:
+#     def __init__(self):
+#         self.num=100
+
+# class Child(Parent):
+
+#     def __init__(self):
+#         super().__init__()
+#         self.var=200
+
+#     def show(self):
+#         print(self.num)
+#         print(self.var)
+
+# son=Child()
+# son.show()
+
+
+#!----------------------------------------------
+
+
+# class Parent:
+#     def __init__(self):
+#         self.__num=100
+
+#     def show(self):
+#         print("Parent:",self.__num)
+
+# class Child(Parent):
+#     def __init__(self):
+#         super().__init__()
+#         self.__var=10
+
+#     def show(self):
+#         print("Child:",self.__var)
+
+# obj=Child()
+# obj.show()
+
+#!----------------------------------------------
+
+
+# * -------------------------------------------------------------------------------------------
+
+
+#!                                  Types of Inheritance
+
+
+# * -------------------------------------------------------------------------------------------
+
+# ? Single Inheritance                               :    parents -> child
+# ? Multilevel Inheritance                           :    ... -> parents -> child -> grandchild -> ...
+# ? Hierarchical Inheritance                         :    parents -> child1 -> child2 -> ...
+# ? Multiple Inheritance(Diamond Problem)            :    parent1 -> parent2 -> child
+# ? Hybrid Inheritance                               :    mixture of all
+
+
+#! single inheritance
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     pass
+
+# SmartPhone(1000,"Apple","13px").buy()
+
+
+# * -------------------------------------------------------------------
+
+
+#! multilevel
+# class Product:
+#     def review(self):
+#         print ("Product customer review")
+
+# class Phone(Product):
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     pass
+
+# s = SmartPhone(20000, "Apple", 12)
+
+# s.buy()
+# s.review()
+
+# * -------------------------------------------------------------------
+
+
+#! Hierarchical
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class SmartPhone(Phone):
+#     pass
+
+# class FeaturePhone(Phone):
+#     pass
+
+# SmartPhone(1000,"Apple","13px").buy()
+# FeaturePhone(10,"Lava","1px").buy()
+
+# * -------------------------------------------------------------------
+
+
+#! Multiple
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class Product:
+#     def review(self):
+#         print ("Customer review")
+
+# class SmartPhone(Phone, Product):
+#     pass
+
+# s=SmartPhone(20000, "Apple", 12)
+
+# s.buy()
+# s.review()
+
+# * -------------------------------------------------------------------
+
+
+#! the diamond problem
+# ? https://stackoverflow.com/questions/56361048/what-is-the-diamond-problem-in-python-and-why-its-not-appear-in-python2
+# class Phone:
+#     def __init__(self, price, brand, camera):
+#         print ("Inside phone constructor")
+#         self.__price = price
+#         self.brand = brand
+#         self.camera = camera
+
+#     def buy(self):
+#         print ("Buying a phone")
+
+# class Product:
+#     def buy(self):
+#         print ("Product buy method")
+
+# #* Method resolution order
+# class SmartPhone(Phone,Product):
+#     pass
+
+# s=SmartPhone(20000, "Apple", 12)
+
+# s.buy()
+
+
+# * -------------------------------------------------------------------
+
+
+#! Practice Questions :
+
+
+# class A:
+#     def m1(self):
+#         return 20
+
+
+# class B(A):
+#     def m1(self):
+#         return 30
+
+#     def m2(self):
+#         return 40
+
+
+# class C(B):
+#     def m2(self):
+#         return 20
+
+
+# obj1 = A()
+# obj2 = B()
+# obj3 = C()
+# print(obj1.m1() + obj3.m1() + obj3.m2())
+
+# * ------------------------------------------------------------------
+
+
+# class A:
+#     def m1(self):
+#         return 20
+
+
+# class B(A):
+#     def m1(self):
+#         val = super().m1() + 30
+#         return val
+
+
+# class C(B):
+#     def m1(self):
+#         val = self.m1() + 20
+#         return val
+
+
+# obj = C()
+# print(obj.m1())                     #  maximum recursion depth exceeded
+#?  third me self.m1() khud ko hi baar baar call kiye ja rha h
+#?  vo kbhi apne upr waale parents pr gya hi nhi
+# * ------------------------------------------------------------------
+
+
+
+
+
+
+# **************************************************************************************************************
+# **************************************************************************************************************
+
+#!                                             Polymorphism
+
+# **************************************************************************************************************
+# **************************************************************************************************************
+
+# Jab same chij situation ke hisab se alag alag behave kare 
+# usai hum polymorphism khte hai
+
+#? Method Overriding
+#? Method Overloading
+#? Operator Overloading
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# * ------------------------------------------------------------------
+
+
+
 
 
 
