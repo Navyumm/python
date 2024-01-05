@@ -14,22 +14,7 @@
 # print("Hello World!!",78,"NAvi",sep="/")
 
 
-#**********************************
-#! DATA TYPES
-#**********************************
 
-#* 1. integer
-# print(8)
-
-# int limit  (1*10^308)
-# print(1e309)
-
-
-#* 2. Decimal/Float 
-# print(8.55)
-
-# Float limit   (1.7*10^307)
-# print(1.7e308)
 
 
 #* 3. Boolean
